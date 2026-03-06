@@ -1,155 +1,98 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact – AUTOTEK</title>
-  <meta name="description" content="Contact AUTOTEK for Texa diagnostic tool pricing and quotes. Located in St. Louis and Minneapolis. Call 314-922-3083.">
+  <title>Contact - AUTOTEK</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+  <nav class="navbar"><div class="nav-container"><a href="index.html" class="nav-logo">AUTO<span>TEK</span></a><button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button><ul class="nav-links" id="navLinks"><li><a href="products.html">Products</a></li><li><a href="videos.html">Videos</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html" class="active">Contact</a></li><li><a href="tel:3149223083" class="nav-phone">&#9742; 314-922-3083</a></li></ul></div></nav>
 
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">AUTO<span>TEK</span></a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="products.html">Products</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-        <li><a href="tel:3149223083" class="nav-phone">📞 314-922-3083</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <section class="page-header">
+  <section class="page-hero">
     <div class="container">
       <h1>Contact Us</h1>
-      <p>Get pricing, schedule a demo, or ask us anything</p>
+      <p>Ready to upgrade your diagnostic capabilities? Let's talk.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
       <div class="contact-grid">
-
-        <!-- Form -->
-        <div class="contact-form-wrap">
-          <h2>Request a Quote</h2>
-          <p>Fill out the form below and we'll get back to you within one business day.</p>
-          <form id="contactForm" action="https://formspree.io/f/xkoqnvzy" method="POST">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Full Name *</label>
-                <input type="text" id="name" name="name" required placeholder="John Smith">
-              </div>
-              <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required placeholder="john@example.com">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
-              </div>
-              <div class="form-group">
-                <label for="company">Company Name</label>
-                <input type="text" id="company" name="company" placeholder="Your Shop Name">
-              </div>
+        <div class="contact-form" id="contactFormWrapper">
+          <h3 style="margin-bottom:24px">Send Us a Message</h3>
+          <form action="https://formspree.io/f/xkoqnvzy" method="POST" id="contactForm">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required placeholder="John Smith">
             </div>
             <div class="form-group">
-              <label for="interest">I'm Interested In</label>
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+            </div>
+            <div class="form-group">
+              <label for="company">Company Name</label>
+              <input type="text" id="company" name="company" placeholder="Your Shop or Fleet Name">
+            </div>
+            <div class="form-group">
+              <label for="interest">I'm Interested In...</label>
               <select id="interest" name="interest">
-                <option value="">Select a product...</option>
+                <option value="">Select a product</option>
                 <option value="Axone Voice">Axone Voice</option>
                 <option value="Deluxe Fleet Package">Deluxe Fleet Package</option>
                 <option value="E Truck">E Truck</option>
                 <option value="AC Service (Konfort)">AC Service (Konfort)</option>
-                <option value="Multiple Products">Multiple Products</option>
                 <option value="General Inquiry">General Inquiry</option>
               </select>
             </div>
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell us about your shop, what you're looking for, or any questions..."></textarea>
+              <textarea id="message" name="message" placeholder="Tell us about your shop, fleet size, or what you're looking for..."></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-lg btn-full">Send Message</button>
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Send Message</button>
           </form>
-          <div class="form-success" id="formSuccess" style="display:none;">
-            <div class="success-icon">✅</div>
-            <h3>Message Sent!</h3>
-            <p>Thanks for reaching out. We'll get back to you within one business day.</p>
+          <div class="form-success" id="formSuccess">
+            <h3 style="margin-bottom:12px">&#10003; Message Sent!</h3>
+            <p>Thanks for reaching out. We'll get back to you within 24 hours.</p>
           </div>
         </div>
-
-        <!-- Sidebar -->
         <div class="contact-sidebar">
-          <div class="contact-card">
-            <h3>📞 Call Us</h3>
-            <a href="tel:3149223083" class="contact-phone-large">314-922-3083</a>
-            <p>Mon – Fri, 8:00 AM – 6:00 PM CT</p>
-          </div>
-
-          <div class="contact-card">
-            <h3>📍 Locations</h3>
-            <div class="location-item">
-              <strong>St. Louis, MO</strong>
-              <p>Serving the greater St. Louis metro area</p>
-            </div>
-            <div class="location-item">
-              <strong>Minneapolis, MN</strong>
-              <p>Serving the Twin Cities and beyond</p>
+          <div class="contact-info-card">
+            <h3>Call Us</h3>
+            <div class="contact-info-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-5.86-5.86A19.79 19.79 0 0 1 1.63 5.45 2 2 0 0 1 3.6 3h3a2 2 0 0 1 2 1.72c.13.97.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.84.57 2.81.7A2 2 0 0 1 22 17z"/></svg>
+              <div><a href="tel:3149223083">314-922-3083</a><br><span style="font-size:0.85rem">Mon-Fri 8:00 AM - 6:00 PM CT</span></div>
             </div>
           </div>
-
-          <div class="contact-card">
-            <h3>🚚 Shipping</h3>
-            <p>We ship Texa diagnostic tools to <strong>all 50 states</strong>. Call for shipping details and timelines.</p>
+          <div class="contact-info-card">
+            <h3>Locations</h3>
+            <div class="contact-info-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div><strong>St. Louis, MO</strong><br>Greater St. Louis Area</div>
+            </div>
+            <div class="contact-info-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div><strong>Minneapolis, MN</strong><br>Twin Cities Metro Area</div>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <h3>Shipping</h3>
+            <div class="contact-info-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              <div>We ship Texa products to <strong>all 50 states</strong>. Contact us for shipping details and timelines.</div>
+            </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-logo">AUTO<span>TEK</span></div>
-          <p>Professional Texa diagnostic solutions for shops and fleets across America.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="videos.html">Videos</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Locations</h4>
-          <ul>
-            <li>St. Louis, MO</li>
-            <li>Minneapolis, MN</li>
-          </ul>
-          <h4 style="margin-top:16px">Call Us</h4>
-          <a href="tel:3149223083" class="footer-phone">314-922-3083</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 AUTOTEK. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="footer-logo">AUTO<span>TEK</span></div><p>Professional Texa diagnostic solutions for shops and fleets across America.</p><a href="tel:3149223083" class="footer-phone">314-922-3083</a></div><div class="footer-col"><h4>Products</h4><ul><li><a href="products.html#axone-voice">Axone Voice</a></li><li><a href="products.html#fleet-package">Deluxe Fleet Package</a></li><li><a href="products.html#e-truck">E Truck</a></li><li><a href="products.html#ac-service">AC Service</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="videos.html">Videos</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Locations</h4><ul><li>St. Louis, MO</li><li>Minneapolis, MN</li><li style="color:var(--text-muted);font-size:0.85rem;margin-top:8px">Ships to all 50 states</li></ul></div></div><div class="footer-bottom">&copy; 2026 AUTOTEK. All rights reserved. Texa Authorized Dealer.</div></div></footer>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

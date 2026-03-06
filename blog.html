@@ -1,86 +1,37 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog – AUTOTEK Diagnostic Insights</title>
-  <meta name="description" content="Diagnostic tips, industry news, product spotlights, and EV insights from Mike Miller at AUTOTEK.">
+  <title>Blog - AUTOTEK Diagnostic Insights</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+  <nav class="navbar"><div class="nav-container"><a href="index.html" class="nav-logo">AUTO<span>TEK</span></a><button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button><ul class="nav-links" id="navLinks"><li><a href="products.html">Products</a></li><li><a href="videos.html">Videos</a></li><li><a href="blog.html" class="active">Blog</a></li><li><a href="contact.html">Contact</a></li><li><a href="tel:3149223083" class="nav-phone">&#9742; 314-922-3083</a></li></ul></div></nav>
 
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">AUTO<span>TEK</span></a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="products.html">Products</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="blog.html" class="active">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="tel:3149223083" class="nav-phone">📞 314-922-3083</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <section class="page-header">
+  <section class="page-hero">
     <div class="container">
       <h1>Blog</h1>
-      <p>Industry insights and diagnostic tips from Mike Miller</p>
+      <p>Industry insights, product spotlights, and diagnostic tips from Mike Miller</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
+      <input type="text" class="blog-search" id="blogSearch" placeholder="Search posts...">
       <div class="blog-filters" id="blogFilters">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="Industry News">Industry News</button>
-        <button class="filter-btn" data-filter="Tips & Tricks">Tips &amp; Tricks</button>
-        <button class="filter-btn" data-filter="Product Spotlights">Product Spotlights</button>
-        <button class="filter-btn" data-filter="EV Diagnostics">EV Diagnostics</button>
+        <button class="blog-filter active" data-category="all">All</button>
+        <button class="blog-filter" data-category="Industry News">Industry News</button>
+        <button class="blog-filter" data-category="Tips & Tricks">Tips &amp; Tricks</button>
+        <button class="blog-filter" data-category="Product Spotlights">Product Spotlights</button>
+        <button class="blog-filter" data-category="EV Diagnostics">EV Diagnostics</button>
       </div>
-      <div class="blog-grid" id="blogGrid">
-        <div class="blog-loading">Loading posts...</div>
-      </div>
+      <div class="blog-grid" id="blogGrid"><div class="blog-loading">Loading posts...</div></div>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-logo">AUTO<span>TEK</span></div>
-          <p>Professional Texa diagnostic solutions for shops and fleets across America.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="videos.html">Videos</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Locations</h4>
-          <ul>
-            <li>St. Louis, MO</li>
-            <li>Minneapolis, MN</li>
-          </ul>
-          <h4 style="margin-top:16px">Call Us</h4>
-          <a href="tel:3149223083" class="footer-phone">314-922-3083</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 AUTOTEK. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="footer-logo">AUTO<span>TEK</span></div><p>Professional Texa diagnostic solutions for shops and fleets across America.</p><a href="tel:3149223083" class="footer-phone">314-922-3083</a></div><div class="footer-col"><h4>Products</h4><ul><li><a href="products.html#axone-voice">Axone Voice</a></li><li><a href="products.html#fleet-package">Deluxe Fleet Package</a></li><li><a href="products.html#e-truck">E Truck</a></li><li><a href="products.html#ac-service">AC Service</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="videos.html">Videos</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Locations</h4><ul><li>St. Louis, MO</li><li>Minneapolis, MN</li><li style="color:var(--text-muted);font-size:0.85rem;margin-top:8px">Ships to all 50 states</li></ul></div></div><div class="footer-bottom">&copy; 2026 AUTOTEK. All rights reserved. Texa Authorized Dealer.</div></div></footer>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

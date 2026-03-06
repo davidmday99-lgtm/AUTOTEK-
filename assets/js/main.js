@@ -1,148 +1,154 @@
-// ============================================================
-// AUTOTEK — main.js
-// ============================================================
+﻿// AUTOTEK main.js
 
+// Mobile nav toggle
 document.addEventListener('DOMContentLoaded', function() {
-
-  // ---- Mobile Nav Toggle ----
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  if (navToggle && navLinks) {
-    navToggle.addEventListener('click', function() {
-      navLinks.classList.toggle('open');
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  if (toggle && links) {
+    toggle.addEventListener('click', function() {
+      links.classList.toggle('open');
     });
     // Close on link click
-    navLinks.querySelectorAll('a').forEach(function(link) {
-      link.addEventListener('click', function() {
-        navLinks.classList.remove('open');
-      });
+    links.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() { links.classList.remove('open'); });
     });
   }
 
-  // ---- Blog: Load posts from data/posts.json ----
-  const blogGrid = document.getElementById('blogGrid');
-  const blogPreview = document.getElementById('blogPreview');
-
-  function createBlogCard(post, expanded) {
-    var card = document.createElement('div');
-    card.className = 'blog-card';
-    card.setAttribute('data-category', post.category);
-
-    var catClass = 'badge-blue';
-    if (post.category === 'EV Diagnostics') catClass = 'badge-green';
-    if (post.category === 'Tips & Tricks') catClass = 'badge-red';
-
-    var dateStr = new Date(post.date).toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
-
-    var html = '<span class="badge ' + catClass + '">' + post.category + '</span>';
-    html += '<h3>' + post.title + '</h3>';
-    html += '<div class="blog-meta"><span>' + dateStr + '</span><span>By ' + post.author + '</span></div>';
-    html += '<p class="blog-excerpt">' + post.excerpt + '</p>';
-
-    if (expanded && post.content) {
-      html += '<div class="blog-content" id="content-' + post.id + '">';
-      var paragraphs = post.content.split('\n\n');
-      for (var i = 0; i < paragraphs.length; i++) {
-        html += '<p>' + paragraphs[i] + '</p>';
-      }
-      html += '</div>';
-      html += '<button class="read-more" onclick="togglePost(' + post.id + ')">Read More →</button>';
-    }
-
-    card.innerHTML = html;
-    return card;
-  }
-
-  function loadPosts() {
-    fetch('data/posts.json')
-      .then(function(res) { return res.json(); })
-      .then(function(posts) {
-        // Sort by date descending
-        posts.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
-
-        // Blog preview (homepage — show 3)
-        if (blogPreview) {
-          blogPreview.innerHTML = '';
-          var previewPosts = posts.slice(0, 3);
-          previewPosts.forEach(function(post) {
-            blogPreview.appendChild(createBlogCard(post, false));
-          });
-        }
-
-        // Full blog page
-        if (blogGrid) {
-          blogGrid.innerHTML = '';
-          window._allPosts = posts;
-          posts.forEach(function(post) {
-            blogGrid.appendChild(createBlogCard(post, true));
-          });
-        }
-      })
-      .catch(function(err) {
-        console.error('Error loading posts:', err);
-        if (blogGrid) blogGrid.innerHTML = '<p class="blog-loading">Unable to load posts.</p>';
-        if (blogPreview) blogPreview.innerHTML = '<p class="blog-loading">Unable to load posts.</p>';
-      });
-  }
-
-  if (blogGrid || blogPreview) {
-    loadPosts();
-  }
-
-  // ---- Blog Filters ----
-  var filterBtns = document.querySelectorAll('.filter-btn');
-  filterBtns.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      filterBtns.forEach(function(b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      var filter = btn.getAttribute('data-filter');
-      var cards = blogGrid.querySelectorAll('.blog-card');
-      cards.forEach(function(card) {
-        if (filter === 'all' || card.getAttribute('data-category') === filter) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
+  // Active nav highlighting
+  var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (href === currentPage) a.classList.add('active');
   });
 
-  // ---- Contact Form: Formspree handling ----
+  // Blog preview (homepage)
+  var blogPreview = document.getElementById('blogPreview');
+  if (blogPreview) {
+    loadBlogPosts('data/posts.json', function(posts) {
+      if (!posts || posts.length === 0) {
+        blogPreview.innerHTML = '<p class="blog-loading">No posts yet. Check back soon!</p>';
+        return;
+      }
+      var recent = posts.slice(0, 3);
+      blogPreview.innerHTML = recent.map(function(p) {
+        return renderBlogCard(p);
+      }).join('');
+    });
+  }
+
+  // Blog page full listing
+  var blogGrid = document.getElementById('blogGrid');
+  var blogFilters = document.getElementById('blogFilters');
+  var blogSearch = document.getElementById('blogSearch');
+  var allPosts = [];
+
+  if (blogGrid && blogFilters) {
+    loadBlogPosts('data/posts.json', function(posts) {
+      allPosts = posts || [];
+      renderBlogGrid(allPosts);
+
+      // Category filters
+      blogFilters.querySelectorAll('.blog-filter').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          blogFilters.querySelectorAll('.blog-filter').forEach(function(b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          filterAndRender();
+        });
+      });
+
+      // Search
+      if (blogSearch) {
+        blogSearch.addEventListener('input', function() { filterAndRender(); });
+      }
+    });
+  }
+
+  function filterAndRender() {
+    var activeFilter = document.querySelector('.blog-filter.active');
+    var category = activeFilter ? activeFilter.getAttribute('data-category') : 'all';
+    var query = blogSearch ? blogSearch.value.toLowerCase() : '';
+    var filtered = allPosts.filter(function(p) {
+      var matchCat = category === 'all' || p.category === category;
+      var matchSearch = !query || p.title.toLowerCase().indexOf(query) !== -1 || p.excerpt.toLowerCase().indexOf(query) !== -1;
+      return matchCat && matchSearch;
+    });
+    renderBlogGrid(filtered);
+  }
+
+  function renderBlogGrid(posts) {
+    if (!blogGrid) return;
+    if (posts.length === 0) {
+      blogGrid.innerHTML = '<p class="blog-loading">No posts found.</p>';
+      return;
+    }
+    blogGrid.innerHTML = posts.map(function(p) { return renderBlogCard(p, true); }).join('');
+    // Attach read more handlers
+    blogGrid.querySelectorAll('.read-more').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var id = btn.getAttribute('data-id');
+        var content = document.getElementById('content-' + id);
+        if (content) {
+          content.classList.toggle('show');
+          btn.textContent = content.classList.contains('show') ? 'Read Less' : 'Read More \u2192';
+        }
+      });
+    });
+  }
+
+  // Contact form success
   var contactForm = document.getElementById('contactForm');
   var formSuccess = document.getElementById('formSuccess');
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      var formData = new FormData(contactForm);
-      fetch(contactForm.action, {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      }).then(function(res) {
-        if (res.ok) {
-          contactForm.style.display = 'none';
-          if (formSuccess) formSuccess.style.display = 'block';
-        } else {
-          alert('There was an error sending your message. Please call us at 314-922-3083.');
-        }
-      }).catch(function() {
-        alert('There was an error sending your message. Please call us at 314-922-3083.');
-      });
+      var data = new FormData(contactForm);
+      fetch(contactForm.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+        .then(function(r) {
+          if (r.ok) {
+            contactForm.style.display = 'none';
+            if (formSuccess) formSuccess.classList.add('show');
+          } else {
+            alert('Something went wrong. Please call us at 314-922-3083.');
+          }
+        })
+        .catch(function() {
+          alert('Something went wrong. Please call us at 314-922-3083.');
+        });
     });
   }
-
 });
 
-// ---- Toggle blog post content ----
-function togglePost(id) {
-  var content = document.getElementById('content-' + id);
-  if (!content) return;
-  var btn = content.nextElementSibling;
-  if (content.classList.contains('expanded')) {
-    content.classList.remove('expanded');
-    if (btn) btn.textContent = 'Read More →';
-  } else {
-    content.classList.add('expanded');
-    if (btn) btn.textContent = '← Read Less';
+function loadBlogPosts(url, callback) {
+  fetch(url)
+    .then(function(r) { return r.json(); })
+    .then(callback)
+    .catch(function() { callback([]); });
+}
+
+function renderBlogCard(post, full) {
+  var date = new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  var badgeClass = 'badge-blue';
+  if (post.category === 'EV Diagnostics') badgeClass = 'badge-red';
+  if (post.category === 'Tips & Tricks') badgeClass = 'badge-green';
+
+  var html = '<div class="blog-card">';
+  html += '<div class="blog-card-body">';
+  html += '<span class="badge ' + badgeClass + '">' + post.category + '</span>';
+  html += '<h3><a href="blog.html">' + post.title + '</a></h3>';
+  html += '<div class="blog-meta"><span>' + date + '</span><span>By ' + post.author + '</span></div>';
+  html += '<p class="blog-excerpt">' + post.excerpt + '</p>';
+  if (full) {
+    html += '<button class="read-more" data-id="' + post.id + '">Read More \u2192</button>';
   }
+  html += '</div>';
+  if (full && post.content) {
+    html += '<div class="blog-content" id="content-' + post.id + '">';
+    var paragraphs = post.content.split('\n\n');
+    for (var i = 0; i < paragraphs.length; i++) {
+      html += '<p>' + paragraphs[i] + '</p>';
+    }
+    html += '</div>';
+  }
+  html += '</div>';
+  return html;
 }
