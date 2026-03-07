@@ -1,92 +1,11 @@
-﻿[
-  {
-    "id": 10,
-    "title": "AutoTek Now Serving St. Louis and Minneapolis",
-    "date": "2026-03-06",
-    "author": "Mike Miller",
-    "category": "Industry News",
-    "excerpt": "We are thrilled to announce that AutoTek is officially open for business, serving the St. Louis and Minneapolis metro areas with premium Texa diagnostic equipment. Whether you run a single-bay shop or a multi-location fleet, we have the tools you need.",
-    "content": "AutoTek is proud to bring world-class Texa diagnostic solutions to the heartland of America. Based in St. Louis, Missouri and Minneapolis, Minnesota, we are your local authorized Texa dealer with the expertise and inventory to equip your shop or fleet with the best diagnostic technology available today.\n\nOur team has years of experience in the automotive diagnostic industry, and we chose Texa because of their unmatched commitment to quality, innovation, and vehicle coverage. From the AI-powered Axone Voice tablet to the specialized E Truck platform for electric vehicles, we carry the full range of Texa products designed to keep your operation running at peak efficiency.\n\nWhile we are proud to serve our local communities in St. Louis and Minneapolis, we also ship to all 50 states. No matter where your shop is located, premium Texa diagnostic equipment is just a phone call away. Contact us at 314-922-3083 to discuss your needs and get a personalized recommendation."
-  },
-  {
-    "id": 9,
-    "title": "Texa Coverage: Why More Makes and Models Matters",
-    "date": "2026-03-05",
-    "author": "Mike Miller",
-    "category": "Product Spotlights",
-    "excerpt": "One of the most critical factors when choosing a diagnostic tool is vehicle coverage. Texa consistently leads the industry with the broadest coverage of makes and models available in a single platform.",
-    "content": "When a customer drives into your bay, you need to know that your diagnostic tool can handle whatever vehicle they bring. Nothing kills shop efficiency faster than telling a customer you cannot diagnose their car because your tool does not support it. This is where Texa truly shines — their vehicle coverage is among the most comprehensive in the industry.\n\nTexa invests heavily in research and development, continuously adding new vehicles, new systems, and new diagnostic capabilities to their platform. Whether it is a domestic Ford F-150 or a European Mercedes-Benz, a Japanese Honda Civic or a Korean Hyundai Tucson, Texa has you covered. Their coverage extends beyond passenger cars to include trucks, buses, agricultural equipment, and marine vessels.\n\nWith real-time wireless updates, your Texa tool stays current as new vehicles hit the market. There is no waiting for annual software discs or expensive upgrade packages. When you invest in Texa, you invest in a platform that grows with the industry and keeps your shop ready for whatever comes through the door."
-  },
-  {
-    "id": 8,
-    "title": "How to Choose the Right Diagnostic Package for Your Fleet",
-    "date": "2026-03-01",
-    "author": "Mike Miller",
-    "category": "Industry News",
-    "excerpt": "Selecting the right diagnostic package for fleet operations requires careful consideration of your vehicle mix, technician skill levels, and long-term growth plans. Here is what fleet managers need to know.",
-    "content": "Fleet managers face unique challenges when selecting diagnostic equipment. Unlike a general repair shop that sees a wide variety of vehicles, fleets often have specific makes and models that need specialized coverage. The key is finding a diagnostic solution that covers your current fleet while being flexible enough to adapt as your vehicles change over time.\n\nTexa's Deluxe Fleet Package is designed specifically for these challenges. It provides comprehensive diagnostic coverage across cars, light trucks, heavy trucks, and commercial vehicles, all in one integrated package. The fleet management features allow you to track repair history per vehicle, generate maintenance reports, and identify recurring issues before they become costly breakdowns.\n\nWhen evaluating your options, consider these factors: How many vehicles are in your fleet? What types of vehicles do you operate? Do you have in-house technicians or outsource repairs? How important is repair history tracking? Answering these questions will help you determine whether a basic diagnostic tool is sufficient or whether you need the full fleet management capabilities that Texa offers. Call us at 314-922-3083 for a personalized fleet assessment."
-  },
-  {
-    "id": 7,
-    "title": "Understanding High-Voltage EV Safety in the Shop",
-    "date": "2026-02-26",
-    "author": "Mike Miller",
-    "category": "EV Diagnostics",
-    "excerpt": "Working on electric vehicles introduces new safety considerations that every shop must understand. High-voltage systems demand respect, proper training, and the right diagnostic tools.",
-    "content": "Electric vehicles are fundamentally different from their internal combustion counterparts, and the most significant difference from a technician's perspective is the presence of high-voltage systems. Battery packs operating at 400 to 800 volts present serious safety risks if not handled properly. Every shop working on EVs needs to invest in proper training and equipment.\n\nTexa's E Truck diagnostic platform is designed with safety as a top priority. The system includes high-voltage insulation testing, allowing technicians to verify system safety before beginning any diagnostic procedure. It guides technicians through proper isolation procedures and provides real-time monitoring of voltage levels throughout the diagnostic process.\n\nBeyond the diagnostic tool itself, shops need to invest in proper personal protective equipment including insulated gloves rated for the voltage levels they will encounter, safety barriers, and rescue hooks. Technicians should be trained in high-voltage safety protocols and CPR. The investment in safety is not optional — it is a fundamental requirement for any shop that wants to service the growing fleet of electric vehicles on the road today."
-  },
-  {
-    "id": 6,
-    "title": "5 Signs Your Diagnostic Tool is Holding You Back",
-    "date": "2026-02-19",
-    "author": "Mike Miller",
-    "category": "Tips & Tricks",
-    "excerpt": "Is your current diagnostic tool keeping up with the demands of modern vehicles? Here are five warning signs that it might be time for an upgrade to a professional-grade Texa solution.",
-    "content": "The automotive industry evolves rapidly, and diagnostic tools that were cutting-edge five years ago may be struggling to keep up with today's vehicles. If you are experiencing any of these five signs, it might be time to consider upgrading to a Texa diagnostic platform.\n\nFirst, if your tool frequently displays 'vehicle not supported' messages, you are losing revenue every time you turn away a customer. Second, if software updates are infrequent or expensive, you are falling behind as new vehicles enter the market. Third, if your tool is slow to boot up or navigate between functions, your technicians are wasting valuable billable time. Fourth, if you cannot access advanced functions like module programming, calibrations, or guided diagnostics, you are leaving money on the table. Fifth, if your tool does not support EV and hybrid diagnostics, you are not prepared for the future.\n\nTexa's diagnostic platforms address all of these pain points. With the broadest vehicle coverage in the industry, frequent over-the-air updates, fast hardware, advanced bi-directional capabilities, and dedicated EV support, Texa keeps your shop competitive. The return on investment is clear — more vehicles serviced, faster diagnosis times, and higher customer satisfaction."
-  },
-  {
-    "id": 5,
-    "title": "Fleet Diagnostics: Keeping Your Business Moving",
-    "date": "2026-02-12",
-    "author": "Mike Miller",
-    "category": "Tips & Tricks",
-    "excerpt": "Downtime is the enemy of any fleet operation. Learn how proactive diagnostics and the right tools can minimize breakdowns and keep your vehicles on the road earning revenue.",
-    "content": "For fleet operators, every minute a vehicle spends in the shop is a minute it is not generating revenue. Whether you run a delivery service, a construction company, or a trucking operation, vehicle uptime is directly tied to your bottom line. This is why investing in proactive diagnostic capabilities is one of the smartest business decisions a fleet manager can make.\n\nTexa's fleet diagnostic solutions allow you to move from reactive repairs to proactive maintenance. By regularly scanning your vehicles and monitoring diagnostic trouble codes, you can identify developing issues before they cause roadside breakdowns. The Deluxe Fleet Package includes repair history tracking that helps you spot patterns — if the same fault keeps appearing on the same vehicle, you know there is an underlying issue that needs attention.\n\nThe cost savings from preventing even one major breakdown can easily justify the investment in professional diagnostic equipment. Consider the cost of a tow, emergency repairs, missed deliveries, and unhappy customers. Now compare that to the cost of a quick diagnostic scan that catches the problem early. The math speaks for itself. Give us a call at 314-922-3083 to learn how Texa fleet solutions can protect your bottom line."
-  },
-  {
-    "id": 4,
-    "title": "AC Service Done Right: The Konfort Advantage",
-    "date": "2026-02-05",
-    "author": "Mike Miller",
-    "category": "Product Spotlights",
-    "excerpt": "AC service is a high-demand, high-margin service for any shop. Texa's Konfort line of AC service stations ensures every job is done precisely and efficiently.",
-    "content": "Air conditioning service is one of the most profitable services a shop can offer, especially during the warmer months. But to capture this revenue consistently, you need equipment that is reliable, accurate, and efficient. Texa's Konfort line of AC service stations delivers on all three fronts.\n\nThe Konfort series handles both R134a and the newer R1234yf refrigerants, which is critical as more vehicles transition to the environmentally friendly R1234yf. The fully automatic operation means your technicians can start the service cycle and move on to other tasks while the machine handles recovery, vacuum, leak testing, and recharging with precision that manual methods simply cannot match.\n\nOne of the standout features of the Konfort line is its advanced leak detection capability. Refrigerant leaks are one of the most common AC issues, and finding them quickly saves time and ensures the repair lasts. The Konfort also includes precise oil and UV dye injection, ensuring the compressor is properly lubricated and any future leaks can be easily identified. If you want to build a reputation for AC service done right, Texa's Konfort is the tool to get you there."
-  },
-  {
-    "id": 3,
-    "title": "The Axone Voice: Hands-Free Diagnostics Are Here",
-    "date": "2026-01-29",
-    "author": "Mike Miller",
-    "category": "Product Spotlights",
-    "excerpt": "Texa's Axone Voice brings voice command technology to automotive diagnostics. Learn how this AI-powered tablet is changing the way technicians work.",
-    "content": "Imagine running a diagnostic scan while your hands are busy under the hood. With Texa's Axone Voice, that is not a futuristic concept — it is reality. The Axone Voice integrates advanced voice recognition technology that allows technicians to navigate menus, select functions, and initiate tests using simple voice commands.\n\nThe practical benefits are immediate. Technicians no longer need to walk back and forth between the vehicle and the diagnostic tool. They can stay focused on the task at hand while the Axone Voice responds to their verbal instructions. This saves time on every job and reduces the frustration of trying to operate a touchscreen with greasy gloves.\n\nBeyond voice commands, the Axone Voice is simply a powerhouse diagnostic tablet. Its 10-inch high-resolution touchscreen is bright enough to read in direct sunlight. It covers all makes and models with deep system access including module programming, guided diagnostics, and wiring diagrams. Wireless Bluetooth connectivity means no cables to trip over. And with automatic over-the-air updates, your Axone Voice always has the latest vehicle coverage and features. Call 314-922-3083 to see a live demo."
-  },
-  {
-    "id": 2,
-    "title": "Electric Vehicle Diagnostics: What Every Shop Needs to Know",
-    "date": "2026-01-22",
-    "author": "Mike Miller",
-    "category": "EV Diagnostics",
-    "excerpt": "Electric vehicles are no longer a niche market. Shops that want to stay competitive need to invest in EV diagnostic capabilities now, before they fall behind.",
-    "content": "The electric vehicle revolution is here, and it is accelerating faster than many in the automotive industry anticipated. EV sales continue to climb year over year, and major manufacturers have committed to electrifying their lineups. For independent shops and fleet operators, this represents both a challenge and an enormous opportunity.\n\nThe challenge is clear: EVs require specialized diagnostic equipment and training. You cannot diagnose a Tesla battery management system or a Rivian drive motor with a traditional OBD2 scanner. The electrical architecture of EVs is fundamentally different, with high-voltage systems, regenerative braking, thermal management, and sophisticated battery management systems that all require dedicated diagnostic capabilities.\n\nThe opportunity is equally clear: shops that invest in EV diagnostics now will capture a growing market that many competitors are not yet prepared to serve. Texa's E Truck platform provides comprehensive EV diagnostic coverage, including battery pack analysis, high-voltage safety testing, motor and inverter diagnostics, and charging system troubleshooting. The shops that prepare today will be the ones thriving tomorrow."
-  },
+[
   {
     "id": 1,
-    "title": "Why Texa Diagnostics is the Future of Auto Repair",
-    "date": "2026-01-15",
+    "title": "How Texa Supports Independent Shops Against Dealers",
+    "date": "2026-03-07",
     "author": "Mike Miller",
     "category": "Industry News",
-    "excerpt": "The automotive repair industry is undergoing a transformation. Modern vehicles demand modern diagnostic tools, and Texa is leading the charge with innovative solutions.",
-    "content": "The days of simple code readers and basic scan tools are behind us. Today's vehicles are rolling computers with dozens of electronic control modules, advanced driver assistance systems, and increasingly complex powertrains. To diagnose and repair these vehicles effectively, shops need diagnostic tools that match the sophistication of the vehicles themselves.\n\nTexa has been at the forefront of automotive diagnostics for over 30 years, and their commitment to innovation shows in every product they make. From the AI-powered Axone Voice with its revolutionary voice command system to the specialized E Truck platform for electric vehicles, Texa consistently delivers tools that help technicians work smarter and more efficiently.\n\nWhat sets Texa apart from the competition is their comprehensive approach. They do not just make scan tools — they provide complete diagnostic solutions that include hardware, software, training, and ongoing support. Their vehicle coverage spans passenger cars, trucks, buses, agricultural equipment, and marine vessels. And with their commitment to regular software updates delivered wirelessly, your Texa investment continues to grow in value over time. The future of auto repair is here, and Texa is leading the way."
+    "excerpt": "Independent repair shops have long faced a competitive disadvantage when it comes to diagnostic capabilities. Dealer tools have historically offered deeper access and more advanced functions. Texa is ...",
+    "content": "Independent repair shops have long faced a competitive disadvantage when it comes to diagnostic capabilities. Dealer tools have historically offered deeper access and more advanced functions. Texa is closing that gap.\n\nTexa's comprehensive vehicle coverage and deep system access give independent shops the ability to perform many of the same diagnostic and programming functions that were previously only available at the dealer. This includes module coding, key programming, injector coding, DPF regeneration, and many other advanced procedures.\n\nThe Right to Repair movement has made significant progress in ensuring that independent shops have access to the same diagnostic information as dealers. Texa has been a strong supporter of this movement, and their diagnostic platforms reflect that commitment by providing the broadest possible access to vehicle systems across all makes and models."
   }
 ]
