@@ -1,5 +1,14 @@
 [
   {
+    "id": 2,
+    "title": "Diesel Diagnostics: What Makes Texa Stand Out",
+    "date": "2026-03-08",
+    "author": "Mike Miller",
+    "category": "Product Spotlights",
+    "excerpt": "Diesel vehicles present unique diagnostic challenges that many scan tools handle poorly. Texa has deep roots in diesel diagnostics, particularly for heavy trucks and commercial vehicles....",
+    "content": "Diesel vehicles present unique diagnostic challenges that many scan tools handle poorly. Texa has deep roots in diesel diagnostics, particularly for heavy trucks and commercial vehicles.\n\nDiesel engines rely on high-pressure fuel injection systems, turbocharger systems, exhaust aftertreatment systems including DPF and SCR, and complex engine management systems. Diagnosing these systems requires specialized knowledge and tools that can access manufacturer-specific parameters and run active tests.\n\nTexa's diagnostic platforms provide comprehensive diesel coverage including forced DPF regeneration, injector coding, turbo actuator testing, AdBlue system diagnostics, and detailed fuel system analysis. For shops that work on diesel trucks and commercial vehicles, Texa is widely considered the go-to diagnostic solution."
+  },
+  {
     "id": 1,
     "title": "How Texa Supports Independent Shops Against Dealers",
     "date": "2026-03-07",
