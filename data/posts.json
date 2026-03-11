@@ -1,5 +1,14 @@
 [
   {
+    "id": 5,
+    "title": "The Importance of Software Updates for Diagnostic Tools",
+    "date": "2026-03-11",
+    "author": "Mike Miller",
+    "category": "Tips & Tricks",
+    "excerpt": "A diagnostic tool is only as good as its software. Outdated software means missing vehicle coverage, unresolved bugs, and inability to access the latest diagnostic functions....",
+    "content": "A diagnostic tool is only as good as its software. Outdated software means missing vehicle coverage, unresolved bugs, and inability to access the latest diagnostic functions.\n\nSome diagnostic tool manufacturers charge hefty annual fees for software updates, and some only release updates quarterly or even annually. In an industry where new vehicles are constantly being released, this means your tool may not support vehicles that are already in your customers' driveways.\n\nTexa takes a different approach with frequent over-the-air updates delivered wirelessly to your diagnostic tool. When new vehicle coverage is added or new diagnostic functions are developed, you receive them automatically. This ensures your Texa tool is always current and always ready for whatever vehicle comes through your door."
+  },
+  {
     "id": 4,
     "title": "EV Charging Infrastructure and What It Means for Shops",
     "date": "2026-03-10",
