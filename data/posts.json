@@ -1,5 +1,14 @@
 [
   {
+    "id": 6,
+    "title": "Hybrid Vehicle Diagnostics: Bridging Two Worlds",
+    "date": "2026-03-12",
+    "author": "Mike Miller",
+    "category": "EV Diagnostics",
+    "excerpt": "Hybrid vehicles combine internal combustion engines with electric drive systems, creating unique diagnostic challenges that require expertise in both traditional and EV technologies....",
+    "content": "Hybrid vehicles combine internal combustion engines with electric drive systems, creating unique diagnostic challenges that require expertise in both traditional and EV technologies.\n\nDiagnosing a hybrid vehicle means understanding how the two powertrains work together. The hybrid control module manages the interaction between the engine and electric motor, deciding when to use each and when to blend them. Issues can arise in either system or in the control logic that manages their interaction.\n\nTexa diagnostic tools provide comprehensive hybrid coverage, allowing technicians to diagnose both the ICE and electric sides of the powertrain. This includes high-voltage battery analysis, motor and inverter testing, regenerative braking diagnostics, and traditional engine diagnostics. Having a single tool that covers both worlds is essential for efficiently diagnosing hybrid vehicles."
+  },
+  {
     "id": 5,
     "title": "The Importance of Software Updates for Diagnostic Tools",
     "date": "2026-03-11",
