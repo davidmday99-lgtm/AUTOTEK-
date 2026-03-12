@@ -28,15 +28,20 @@ body{
   margin:auto;
 }
 
-/* GLOBAL LINK FIX */
+/* LINK COLOR FIX */
 
-a{
-  color:#ffffff;
+.hero-contact a,
+.contact-box a,
+.footer a{
+  color:#ffffff !important;
   text-decoration:none;
+  font-weight:600;
 }
 
-a:hover{
-  color:var(--orange);
+.hero-contact a:hover,
+.contact-box a:hover,
+.footer a:hover{
+  color:var(--orange) !important;
 }
 
 /* NAVBAR */
@@ -58,7 +63,7 @@ a:hover{
 .nav-logo{
   font-size:26px;
   font-weight:800;
-  color:black;
+  color:#000;
 }
 
 .nav-links{
@@ -68,8 +73,9 @@ a:hover{
 }
 
 .nav-links a{
-  color:black;
+  color:#000;
   font-weight:700;
+  text-decoration:none;
 }
 
 /* HERO VIDEO */
@@ -81,7 +87,7 @@ a:hover{
   min-height:420px;
   max-height:720px;
   overflow:hidden;
-  background:black;
+  background:#000;
 }
 
 .video-wrapper{
@@ -102,7 +108,7 @@ a:hover{
 /* HERO TEXT */
 
 .hero-text{
-  background:black;
+  background:#000;
   text-align:center;
   padding:80px 20px;
 }
@@ -130,6 +136,17 @@ a:hover{
   flex-wrap:wrap;
 }
 
+/* TEXA BADGE */
+
+.hero-badge{
+  display:inline-block;
+  padding:10px 22px;
+  border:2px solid #ffffff;
+  border-radius:999px;
+  font-weight:700;
+  margin-bottom:20px;
+}
+
 /* BUTTONS */
 
 .btn{
@@ -140,7 +157,7 @@ a:hover{
 
 .btn-primary{
   background:var(--orange);
-  color:black;
+  color:#000;
 }
 
 .btn-primary:hover{
@@ -148,13 +165,13 @@ a:hover{
 }
 
 .btn-outline{
-  border:2px solid white;
-  color:white;
+  border:2px solid #fff;
+  color:#fff;
 }
 
 .btn-outline:hover{
-  background:white;
-  color:black;
+  background:#fff;
+  color:#000;
 }
 
 /* SECTIONS */
@@ -164,7 +181,7 @@ a:hover{
 }
 
 .section-black{
-  background:black;
+  background:#000;
 }
 
 .section-dark-gray{
@@ -291,7 +308,7 @@ a:hover{
 /* FOOTER */
 
 .footer{
-  background:black;
+  background:#000;
   border-top:1px solid var(--border);
   padding:60px 0;
 }
