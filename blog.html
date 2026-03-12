@@ -1,37 +1,198 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog - AUTOTEK Diagnostic Insights</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | ProAutoTek.com</title>
+  <meta
+    name="description"
+    content="Read the latest TEXA diagnostic insights, product spotlights, EV updates, and service tips from ProAutoTek.com."
+  />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
-  <nav class="navbar"><div class="nav-container"><a href="index.html" class="nav-logo">AUTO<span>TEK</span></a><button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button><ul class="nav-links" id="navLinks"><li><a href="products.html">Products</a></li><li><a href="videos.html">Videos</a></li><li><a href="blog.html" class="active">Blog</a></li><li><a href="contact.html">Contact</a></li><li><a href="tel:3149223083" class="nav-phone">&#9742; 314-922-3083</a></li></ul></div></nav>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">Security Solutions</a>
 
-  <section class="page-hero">
-    <div class="container">
-      <h1>Blog</h1>
-      <p>Industry insights, product spotlights, and diagnostic tips from Mike Miller</p>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="tel:3149223083" class="nav-phone">314-922-3083</a></li>
+      </ul>
     </div>
-  </section>
+  </nav>
 
-  <section class="section">
-    <div class="container">
-      <input type="text" class="blog-search" id="blogSearch" placeholder="Search posts...">
-      <div class="blog-filters" id="blogFilters">
-        <button class="blog-filter active" data-category="all">All</button>
-        <button class="blog-filter" data-category="Industry News">Industry News</button>
-        <button class="blog-filter" data-category="Tips & Tricks">Tips &amp; Tricks</button>
-        <button class="blog-filter" data-category="Product Spotlights">Product Spotlights</button>
-        <button class="blog-filter" data-category="EV Diagnostics">EV Diagnostics</button>
+  <section class="section section-black">
+    <div class="container blog-container">
+      <div class="section-header light">
+        <h2>Diagnostic Insights & Industry Updates</h2>
+        <p>Click a title below to open each article.</p>
       </div>
-      <div class="blog-grid" id="blogGrid"><div class="blog-loading">Loading posts...</div></div>
+
+      <div class="blog-list">
+
+        <article class="blog-item">
+          <div class="blog-date">March 11, 2026</div>
+          <h3>
+            <a href="#post-hybrid">Hybrid Vehicle Diagnostics: Bridging Two Worlds</a>
+          </h3>
+          <p>
+            Hybrid vehicles combine internal combustion and electric systems, creating unique
+            diagnostic challenges for modern repair shops.
+          </p>
+        </article>
+
+        <article class="blog-item">
+          <div class="blog-date">March 10, 2026</div>
+          <h3>
+            <a href="#post-updates">Why Software Updates Matter More Than Ever for Diagnostic Tools</a>
+          </h3>
+          <p>
+            Updated software means better coverage, fewer bugs, and access to the latest
+            diagnostic functions for new vehicles.
+          </p>
+        </article>
+
+        <article class="blog-item">
+          <div class="blog-date">March 9, 2026</div>
+          <h3>
+            <a href="#post-ev">EV Charging Diagnostics and What It Means for Repair Shops</a>
+          </h3>
+          <p>
+            Electric vehicle charging systems are becoming a major service category, and shops
+            need the right tools to keep up.
+          </p>
+        </article>
+
+        <article class="blog-item">
+          <div class="blog-date">March 8, 2026</div>
+          <h3>
+            <a href="#post-etruck">How Remote Diagnostics with eTRUCK Can Reduce Downtime</a>
+          </h3>
+          <p>
+            Connected diagnostics give workshops and fleets real-time visibility into vehicle
+            condition and service needs.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="blog-posts">
+
+        <article class="blog-post" id="post-hybrid">
+          <div class="blog-date">March 11, 2026</div>
+          <h2>Hybrid Vehicle Diagnostics: Bridging Two Worlds</h2>
+          <p class="blog-author">By Mike Miller</p>
+          <p>
+            Hybrid vehicles combine internal combustion engines with electric drive systems,
+            creating unique diagnostic challenges that require expertise in both traditional and
+            EV technologies.
+          </p>
+          <p>
+            Diagnosing a hybrid vehicle means understanding how the two powertrains work
+            together. The hybrid control module manages the interaction between the engine and
+            electric motor, deciding when to use each and when to blend them.
+          </p>
+          <p>
+            TEXA diagnostic tools provide comprehensive hybrid coverage, allowing technicians to
+            diagnose both the ICE and electric sides of the powertrain. This includes battery
+            analysis, motor testing, inverter diagnostics, and conventional engine diagnostics.
+          </p>
+        </article>
+
+        <article class="blog-post" id="post-updates">
+          <div class="blog-date">March 10, 2026</div>
+          <h2>Why Software Updates Matter More Than Ever for Diagnostic Tools</h2>
+          <p class="blog-author">By Mike Miller</p>
+          <p>
+            A diagnostic tool is only as good as its software. Outdated software means missing
+            vehicle coverage, unresolved bugs, and inability to access the latest diagnostic
+            functions.
+          </p>
+          <p>
+            Some manufacturers release updates quarterly or annually. In a market where new
+            vehicles arrive constantly, that can leave your tool behind.
+          </p>
+          <p>
+            TEXA takes a more aggressive approach with frequent updates that help shops stay
+            current and ready for modern service work.
+          </p>
+        </article>
+
+        <article class="blog-post" id="post-ev">
+          <div class="blog-date">March 9, 2026</div>
+          <h2>EV Charging Diagnostics and What It Means for Repair Shops</h2>
+          <p class="blog-author">By Mike Miller</p>
+          <p>
+            EV charging systems are becoming a major part of vehicle diagnostics. Repair shops
+            that understand charging faults, communication errors, and battery-related issues
+            will be better positioned for the future.
+          </p>
+          <p>
+            Modern diagnostic platforms help technicians identify charging problems faster and
+            make more accurate repair decisions on new electric vehicle systems.
+          </p>
+        </article>
+
+        <article class="blog-post" id="post-etruck">
+          <div class="blog-date">March 8, 2026</div>
+          <h2>How Remote Diagnostics with eTRUCK Can Reduce Downtime</h2>
+          <p class="blog-author">By Mike Miller</p>
+          <p>
+            Remote diagnostics can change the way workshops and fleets manage service. With
+            eTRUCK, shops can monitor connected vehicles, review status remotely, and address
+            maintenance issues before they become major failures.
+          </p>
+          <p>
+            This reduces downtime, improves scheduling, and creates a better support experience
+            for drivers, fleet managers, and customers.
+          </p>
+        </article>
+
+      </div>
     </div>
   </section>
 
-  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="footer-logo">AUTO<span>TEK</span></div><p>Professional Texa diagnostic solutions for shops and fleets across America.</p><a href="tel:3149223083" class="footer-phone">314-922-3083</a></div><div class="footer-col"><h4>Products</h4><ul><li><a href="products.html#axone-voice">Axone Voice</a></li><li><a href="products.html#fleet-package">Deluxe Fleet Package</a></li><li><a href="products.html#e-truck">E Truck</a></li><li><a href="products.html#ac-service">AC Service</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="videos.html">Videos</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Locations</h4><ul><li>St. Louis, MO</li><li>Minneapolis, MN</li><li style="color:var(--text-muted);font-size:0.85rem;margin-top:8px">Ships to all 50 states</li></ul></div></div><div class="footer-bottom">&copy; 2026 AUTOTEK. All rights reserved. Texa Authorized Dealer.</div></div></footer>
-  <script src="assets/js/main.js"></script>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo">Security Solutions</div>
+        <p class="footer-text">
+          Professional TEXA diagnostic equipment available nationwide through ProAutoTek.com
+        </p>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-list">
+          <li>314-922-3083</li>
+          <li>info@ProAutoTek.com</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Coverage</h4>
+        <ul class="footer-list">
+          <li>Nationwide Coverage</li>
+          <li>U.S. Based Tech Support</li>
+          <li>English Speaking Support</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Security Solutions | ProAutoTek.com
+    </div>
+  </footer>
 </body>
 </html>
