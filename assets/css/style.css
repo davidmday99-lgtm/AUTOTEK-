@@ -180,36 +180,41 @@ a{
 
 .btn{
   display:inline-block;
-  padding:16px 30px;
-  border-radius:14px;
-  font-weight:800;
-  font-size:18px;
+  padding:15px 28px;
+  border-radius:12px;
+  font-weight:900;
   transition:all .2s ease;
+  border:2px solid transparent;
 }
 
 .btn-primary{
   background:var(--orange);
-  color:#000 !important;
+  color:#000;
+  border-color:var(--orange);
+  box-shadow:var(--shadow);
 }
 
 .btn-primary:hover{
   background:var(--orange-hover);
+  border-color:var(--orange-hover);
+  transform:translateY(-1px);
 }
 
 .btn-outline{
-  border:2px solid #fff;
-  color:#fff !important;
+  background:transparent;
+  color:#fff;
+  border-color:#fff;
 }
 
 .btn-outline:hover{
   background:#fff;
-  color:#000 !important;
+  color:#000;
 }
 
-/* SECTIONS */
+/* GENERAL SECTIONS */
 
 .section{
-  padding:88px 0;
+  padding:84px 0;
 }
 
 .section-black{
@@ -222,28 +227,31 @@ a{
 
 .section-header{
   text-align:center;
-  margin-bottom:54px;
+  margin-bottom:42px;
+}
+
+.section-header.tight{
+  margin-bottom:28px;
 }
 
 .section-header h2{
-  font-size:46px;
+  font-size:clamp(2rem, 4vw, 3rem);
   line-height:1.1;
-  font-weight:800;
-  margin-bottom:12px;
+  font-weight:900;
+  margin-bottom:10px;
 }
 
 .section-header p{
-  color:var(--text-soft);
-  font-size:18px;
+  font-size:1.05rem;
   font-weight:600;
 }
 
-.orange-heading{
-  color:var(--orange);
+.section-header.light h2{
+  color:#fff;
 }
 
-.orange-card-title{
-  color:var(--orange);
+.section-header.light p{
+  color:var(--text-soft);
 }
 
 /* PRODUCTS */
