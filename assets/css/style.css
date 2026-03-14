@@ -477,6 +477,19 @@ a{
   .video-card iframe{
     height:260px;
   }
+
+  .card{
+    padding:24px !important;
+  }
+
+  .card h3{
+    font-size:1.5rem !important;
+  }
+
+  .card p{
+    font-size:1.1rem !important;
+    line-height:1.6;
+  }
 }
 
 @media (max-width:640px){
@@ -505,5 +518,32 @@ a{
     width:100%;
     max-width:340px;
     text-align:center;
+  }
+
+  .card{
+    padding:28px 20px !important;
+    border-radius:14px;
+  }
+
+  .card h3{
+    font-size:1.6rem !important;
+    margin-bottom:14px;
+  }
+
+  .card p{
+    font-size:1.15rem !important;
+    line-height:1.7;
+  }
+
+  .section{
+    padding:48px 0;
+  }
+
+  .section-header h2{
+    font-size:1.6rem;
+  }
+
+  .nav-links li a{
+    font-size:1rem !important;
   }
 }
