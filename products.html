@@ -28,6 +28,27 @@
   .nav-logo { display: flex; align-items: center; }
   .nav-links li a { font-size: 1.1rem; font-weight: 600; }
   .nav-phone { font-size: 1.1rem; font-weight: 700; }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .nav-container { flex-direction: column; gap: 10px; }
+    .nav-logo img { height: 200px !important; }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 8px; }
+    .nav-links li a { font-size: 0.95rem !important; }
+    .products-grid { grid-template-columns: 1fr !important; gap: 16px; }
+    .card { padding: 20px !important; }
+    .card h3 { font-size: 1.3rem !important; }
+    .card p { font-size: 1rem !important; }
+    .section-header-orange { font-size: 1.5rem !important; }
+    h1 { font-size: 1.5rem !important; }
+    .hero-badge, .hero-badge a { font-size: 0.9rem !important; }
+    .btn { padding: 12px 24px !important; font-size: 1rem !important; }
+  }
+  @media (max-width: 480px) {
+    .nav-logo img { height: 150px !important; }
+    .products-grid { padding: 0 8px; }
+    .card { padding: 16px !important; }
+  }
 </style>
 </head>
 
