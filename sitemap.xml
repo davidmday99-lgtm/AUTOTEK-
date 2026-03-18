@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://proautotek.com/</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -12,9 +12,14 @@
   </url>
   <url>
     <loc>https://proautotek.com/blog.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <priority>0.8</priority>
   </url>
+    <url>
+      <loc>https://proautotek.com/blog/posts/2026-03-18-axone-voice.html</loc>
+      <lastmod>2026-03-18</lastmod>
+      <priority>0.7</priority>
+    </url>
     <url>
       <loc>https://proautotek.com/blog/posts/2026-03-16-remote-diagnostics-fleet.html</loc>
       <lastmod>2026-03-16</lastmod>
