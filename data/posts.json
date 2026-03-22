@@ -1,5 +1,14 @@
 [
   {
+    "id": 16,
+    "title": "The Rise of ADAS Calibration in Auto Repair",
+    "date": "2026-03-22",
+    "author": "Mike Miller",
+    "category": "Industry News",
+    "excerpt": "Advanced Driver Assistance Systems are becoming standard equipment on new vehicles, creating a massive new revenue opportunity for shops equipped to handle ADAS calibration....",
+    "content": "Advanced Driver Assistance Systems are becoming standard equipment on new vehicles, creating a massive new revenue opportunity for shops equipped to handle ADAS calibration.\n\nEvery time a windshield is replaced, a bumper is removed, or a wheel alignment is performed on an ADAS-equipped vehicle, the sensors and cameras may need recalibration. This includes forward-facing cameras, radar sensors, ultrasonic sensors, and lidar units. Without proper calibration, these safety systems may not function correctly.\n\nTexa diagnostic tools include ADAS calibration capabilities that allow shops to perform these critical procedures in-house rather than sending vehicles to the dealer. The investment in ADAS calibration equipment and training pays for itself quickly given the high demand and premium pricing these services command."
+  },
+  {
     "id": 15,
     "title": "Top 5 Diagnostic Tips for Modern Vehicles",
     "date": "2026-03-21",
