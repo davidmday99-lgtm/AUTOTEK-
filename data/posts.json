@@ -1,5 +1,14 @@
 [
   {
+    "id": 24,
+    "title": "EV Charging Infrastructure and What It Means for Shops",
+    "date": "2026-03-30",
+    "author": "Mike Miller",
+    "category": "EV Diagnostics",
+    "excerpt": "As EV charging infrastructure expands rapidly across the country, shops need to understand how charging systems work and how to diagnose charging-related issues....",
+    "content": "As EV charging infrastructure expands rapidly across the country, shops need to understand how charging systems work and how to diagnose charging-related issues.\n\nEV owners frequently report charging problems, and these issues can stem from the vehicle's onboard charger, the charging cable, the EVSE (charging station), or the vehicle's battery management system. Being able to diagnose which component is causing the issue requires specialized knowledge and tools.\n\nTexa's EV diagnostic capabilities include comprehensive charging system analysis. Technicians can monitor charging parameters in real time, test the onboard charger's performance, verify communication between the vehicle and the EVSE, and diagnose battery management system faults that may prevent charging. As EVs become more common, charging diagnostics will become a regular service that shops need to provide."
+  },
+  {
     "id": 23,
     "title": "Maximizing Shop Revenue with Professional Diagnostic Tools",
     "date": "2026-03-29",
