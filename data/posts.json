@@ -1,5 +1,14 @@
 [
   {
+    "id": 30,
+    "title": "The Future of Connected Vehicles and Remote Diagnostics",
+    "date": "2026-04-05",
+    "author": "Mike Miller",
+    "category": "Industry News",
+    "excerpt": "Connected vehicle technology is opening the door to remote diagnostics, where shops can monitor vehicle health and diagnose issues without the vehicle being physically present....",
+    "content": "Connected vehicle technology is opening the door to remote diagnostics, where shops can monitor vehicle health and diagnose issues without the vehicle being physically present.\n\nTelematics systems in modern vehicles continuously monitor vehicle systems and can transmit diagnostic information over cellular networks. This technology enables fleet managers to receive real-time alerts when a vehicle develops a fault, allowing them to schedule service proactively rather than waiting for a breakdown.\n\nTexa is at the forefront of connected diagnostic technology, developing solutions that bridge the gap between remote monitoring and in-shop diagnostics. As connected vehicle technology matures, shops that are already equipped with Texa diagnostic platforms will be well-positioned to offer remote diagnostic services as an additional revenue stream."
+  },
+  {
     "id": 29,
     "title": "Common Diagnostic Mistakes and How to Avoid Them",
     "date": "2026-04-04",
