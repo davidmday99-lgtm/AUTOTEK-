@@ -1,5 +1,14 @@
 [
   {
+    "id": 33,
+    "title": "Scanning vs. Diagnostics: Understanding the Difference",
+    "date": "2026-04-08",
+    "author": "Mike Miller",
+    "category": "Tips & Tricks",
+    "excerpt": "Many people use the terms scanning and diagnostics interchangeably, but they are actually very different processes. Understanding the difference is key to providing quality repairs....",
+    "content": "Many people use the terms scanning and diagnostics interchangeably, but they are actually very different processes. Understanding the difference is key to providing quality repairs.\n\nScanning is simply reading fault codes from a vehicle's electronic control modules. Any basic code reader can do this. Diagnostics, on the other hand, is the process of using those codes as starting points to identify the actual root cause of a problem through testing, measurement, and logical reasoning.\n\nTexa diagnostic tools are designed for true diagnostics, not just scanning. They provide live data streaming, active component testing, guided troubleshooting procedures, wiring diagrams, and technical specifications. These capabilities allow technicians to move beyond simply reading codes to actually diagnosing and solving problems efficiently."
+  },
+  {
     "id": 32,
     "title": "Why Training Matters as Much as the Tool",
     "date": "2026-04-07",
