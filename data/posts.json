@@ -1,5 +1,14 @@
 [
   {
+    "id": 35,
+    "title": "Top 5 Diagnostic Tips for Modern Vehicles",
+    "date": "2026-04-10",
+    "author": "Mike Miller",
+    "category": "Tips & Tricks",
+    "excerpt": "Modern vehicles contain more electronic systems than ever before. Here are five essential tips every technician should follow when diagnosing today's complex vehicles....",
+    "content": "Modern vehicles contain more electronic systems than ever before. Here are five essential tips every technician should follow when diagnosing today's complex vehicles.\n\nFirst, always start with a full system scan rather than jumping to the system you suspect. Many faults are interconnected, and a full scan reveals the complete picture. Second, check for technical service bulletins before diving deep into diagnostics. The manufacturer may have already identified and documented the exact issue you are seeing.\n\nThird, pay attention to freeze frame data. It tells you the exact conditions under which a fault occurred, which is invaluable for intermittent issues. Fourth, never clear codes without documenting them first. Fifth, invest time in understanding the vehicle communication architecture \u2014 knowing which modules talk to each other helps you trace communication faults quickly."
+  },
+  {
     "id": 34,
     "title": "Agricultural Equipment Diagnostics: A Growing Opportunity",
     "date": "2026-04-09",
