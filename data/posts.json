@@ -1,5 +1,14 @@
 [
   {
+    "id": 38,
+    "title": "Why Wireless Diagnostics Are Changing the Game",
+    "date": "2026-04-13",
+    "author": "Mike Miller",
+    "category": "Product Spotlights",
+    "excerpt": "The shift from wired to wireless diagnostic connectivity is more than a convenience upgrade \u2014 it fundamentally changes how technicians interact with vehicles during the diagnostic process....",
+    "content": "The shift from wired to wireless diagnostic connectivity is more than a convenience upgrade \u2014 it fundamentally changes how technicians interact with vehicles during the diagnostic process.\n\nWith wireless Bluetooth connectivity, technicians are no longer tethered to the vehicle by a cable. They can walk around the vehicle during a road test simulation, check components under the hood while monitoring live data, or even step away to reference repair information without losing their diagnostic connection.\n\nTexa's Axone Voice takes wireless diagnostics to the next level by combining Bluetooth connectivity with voice commands. Technicians can initiate scans, select systems, and run tests without touching the tablet at all. This is especially valuable during tasks that require both hands, like checking wiring connections or testing components while monitoring live data."
+  },
+  {
     "id": 37,
     "title": "Battery Health Testing: Beyond Simple Voltage Checks",
     "date": "2026-04-12",
