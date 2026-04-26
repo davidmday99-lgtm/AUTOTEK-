@@ -1,5 +1,14 @@
 [
   {
+    "id": 51,
+    "title": "Truck and Commercial Vehicle Diagnostics with Texa",
+    "date": "2026-04-26",
+    "author": "Mike Miller",
+    "category": "Product Spotlights",
+    "excerpt": "Commercial vehicle diagnostics require specialized tools that go beyond typical automotive scan tools. Texa has been a leader in truck and commercial vehicle diagnostics for decades....",
+    "content": "Commercial vehicle diagnostics require specialized tools that go beyond typical automotive scan tools. Texa has been a leader in truck and commercial vehicle diagnostics for decades.\n\nHeavy trucks use different communication protocols, different connector types, and have systems that simply do not exist on passenger cars. Exhaust aftertreatment systems on trucks are more complex, air brake systems require specialized diagnostics, and transmission systems in commercial vehicles have unique calibration and programming requirements.\n\nTexa's truck diagnostic coverage is among the most comprehensive available, supporting major manufacturers including Freightliner, Kenworth, Peterbilt, Volvo, Mack, International, and many more. The Deluxe Fleet Package is specifically designed for shops and fleets that work on commercial vehicles, providing the deep system access and specialized functions that truck diagnostics demand."
+  },
+  {
     "id": 50,
     "title": "The Future of Connected Vehicles and Remote Diagnostics",
     "date": "2026-04-25",
