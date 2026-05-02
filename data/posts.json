@@ -1,5 +1,14 @@
 [
   {
+    "id": 57,
+    "title": "Battery Health Testing: Beyond Simple Voltage Checks",
+    "date": "2026-05-02",
+    "author": "Mike Miller",
+    "category": "Tips & Tricks",
+    "excerpt": "A simple voltage reading tells you almost nothing about a battery's true health. Modern battery testing requires understanding state of charge, state of health, and cold cranking amp capacity....",
+    "content": "A simple voltage reading tells you almost nothing about a battery's true health. Modern battery testing requires understanding state of charge, state of health, and cold cranking amp capacity.\n\nTexa diagnostic tools provide comprehensive battery testing that goes far beyond basic voltage measurement. They can analyze the internal resistance of the battery, measure actual cold cranking amp output, and compare results against the manufacturer's specifications for that specific battery type and size.\n\nFor electric vehicles, battery testing becomes even more critical and complex. EV battery packs consist of hundreds or thousands of individual cells, and diagnosing issues requires cell-level analysis. Texa's E Truck platform provides this level of detail, allowing technicians to identify weak cells, monitor thermal management performance, and assess overall pack health."
+  },
+  {
     "id": 56,
     "title": "The Rise of ADAS Calibration in Auto Repair",
     "date": "2026-05-01",
