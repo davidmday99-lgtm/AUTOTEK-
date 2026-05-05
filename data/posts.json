@@ -1,5 +1,14 @@
 [
   {
+    "id": 60,
+    "title": "Understanding CAN Bus Networks in Modern Vehicles",
+    "date": "2026-05-05",
+    "author": "Mike Miller",
+    "category": "Tips & Tricks",
+    "excerpt": "The Controller Area Network bus is the backbone of modern vehicle electronics. Understanding how CAN bus works is essential for any technician working on vehicles built in the last two decades....",
+    "content": "The Controller Area Network bus is the backbone of modern vehicle electronics. Understanding how CAN bus works is essential for any technician working on vehicles built in the last two decades.\n\nCAN bus allows electronic control modules to communicate with each other over a shared network. Instead of dedicated wiring between every module, CAN bus uses two wires \u2014 CAN High and CAN Low \u2014 to carry messages between all modules on the network. This dramatically reduces wiring complexity but means that a fault on the bus can affect multiple systems.\n\nTexa diagnostic tools provide advanced CAN bus analysis capabilities, allowing technicians to monitor bus communication in real time, identify modules that are not responding, and detect electrical faults on the bus wiring. This is particularly valuable for diagnosing communication fault codes, which are among the most challenging issues technicians face."
+  },
+  {
     "id": 59,
     "title": "Preparing Your Shop for R1234yf AC Service",
     "date": "2026-05-04",
