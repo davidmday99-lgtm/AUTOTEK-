@@ -1,5 +1,14 @@
 [
   {
+    "id": 61,
+    "title": "How Texa Supports Independent Shops Against Dealers",
+    "date": "2026-05-06",
+    "author": "Mike Miller",
+    "category": "Industry News",
+    "excerpt": "Independent repair shops have long faced a competitive disadvantage when it comes to diagnostic capabilities. Dealer tools have historically offered deeper access and more advanced functions. Texa is ...",
+    "content": "Independent repair shops have long faced a competitive disadvantage when it comes to diagnostic capabilities. Dealer tools have historically offered deeper access and more advanced functions. Texa is closing that gap.\n\nTexa's comprehensive vehicle coverage and deep system access give independent shops the ability to perform many of the same diagnostic and programming functions that were previously only available at the dealer. This includes module coding, key programming, injector coding, DPF regeneration, and many other advanced procedures.\n\nThe Right to Repair movement has made significant progress in ensuring that independent shops have access to the same diagnostic information as dealers. Texa has been a strong supporter of this movement, and their diagnostic platforms reflect that commitment by providing the broadest possible access to vehicle systems across all makes and models."
+  },
+  {
     "id": 60,
     "title": "Understanding CAN Bus Networks in Modern Vehicles",
     "date": "2026-05-05",
