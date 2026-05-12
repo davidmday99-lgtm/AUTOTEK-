@@ -1,5 +1,14 @@
 [
   {
+    "id": 67,
+    "title": "Building a Preventive Maintenance Program with Texa",
+    "date": "2026-05-12",
+    "author": "Mike Miller",
+    "category": "Tips & Tricks",
+    "excerpt": "Preventive maintenance is the cornerstone of fleet reliability. Texa's diagnostic tools and fleet management features make building and executing a preventive maintenance program easier than ever....",
+    "content": "Preventive maintenance is the cornerstone of fleet reliability. Texa's diagnostic tools and fleet management features make building and executing a preventive maintenance program easier than ever.\n\nA good preventive maintenance program starts with regular diagnostic scans. By scanning each vehicle on a set schedule, you can catch developing issues before they cause breakdowns. Texa's fleet management features allow you to set maintenance intervals, track service history, and generate reports that show fleet health trends over time.\n\nThe cost savings from preventive maintenance are well documented. Industry studies consistently show that every dollar spent on preventive maintenance saves between three and five dollars in reactive repair costs. When you factor in the additional savings from reduced downtime and extended vehicle life, the case for a professional preventive maintenance program becomes overwhelming."
+  },
+  {
     "id": 66,
     "title": "Hybrid Vehicle Diagnostics: Bridging Two Worlds",
     "date": "2026-05-11",
