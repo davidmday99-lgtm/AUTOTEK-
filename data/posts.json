@@ -1,5 +1,14 @@
 [
   {
+    "id": 69,
+    "title": "Common Diagnostic Mistakes and How to Avoid Them",
+    "date": "2026-05-14",
+    "author": "Mike Miller",
+    "category": "Tips & Tricks",
+    "excerpt": "Even experienced technicians make diagnostic mistakes that cost time and money. Here are the most common pitfalls and how to avoid them....",
+    "content": "Even experienced technicians make diagnostic mistakes that cost time and money. Here are the most common pitfalls and how to avoid them.\n\nThe number one mistake is parts-swapping instead of diagnosing. Replacing parts based on a code without verifying the root cause wastes money and often does not fix the problem. Always follow a logical diagnostic process: read the code, understand what it means, test the circuit or component, and verify the repair.\n\nAnother common mistake is ignoring related codes. When multiple fault codes are present, they often point to a single root cause. For example, multiple communication codes might indicate a CAN bus wiring issue rather than multiple module failures. Texa's diagnostic tools help by presenting codes in a logical order and providing guided troubleshooting that considers the relationships between different faults."
+  },
+  {
     "id": 68,
     "title": "Texa Marine Diagnostics: Beyond the Road",
     "date": "2026-05-13",
