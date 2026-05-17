@@ -1,5 +1,77 @@
 [
   {
+    "id": 72,
+    "title": "Why Training Matters as Much as the Tool",
+    "date": "2026-05-17",
+    "author": "Mike Miller",
+    "category": "Tips & Tricks",
+    "excerpt": "The most advanced diagnostic tool in the world is only as effective as the technician using it. Investing in training is just as important as investing in equipment....",
+    "content": "The most advanced diagnostic tool in the world is only as effective as the technician using it. Investing in training is just as important as investing in equipment.\n\nTexa understands this, which is why they provide extensive training resources for their diagnostic platforms. From online tutorials and webinars to in-person training sessions, Texa ensures that technicians can maximize the capabilities of their diagnostic tools.\n\nAt AutoTek, we go beyond just selling you a tool. We are committed to making sure you and your technicians know how to use it effectively. When you purchase a Texa diagnostic platform from us, we provide personalized onboarding, answer your questions, and help you integrate the tool into your shop's workflow. Because the best tool is the one you know how to use."
+  },
+  {
+    "id": 71,
+    "title": "Truck and Commercial Vehicle Diagnostics with Texa",
+    "date": "2026-05-16",
+    "author": "Mike Miller",
+    "category": "Product Spotlights",
+    "excerpt": "Commercial vehicle diagnostics require specialized tools that go beyond typical automotive scan tools. Texa has been a leader in truck and commercial vehicle diagnostics for decades....",
+    "content": "Commercial vehicle diagnostics require specialized tools that go beyond typical automotive scan tools. Texa has been a leader in truck and commercial vehicle diagnostics for decades.\n\nHeavy trucks use different communication protocols, different connector types, and have systems that simply do not exist on passenger cars. Exhaust aftertreatment systems on trucks are more complex, air brake systems require specialized diagnostics, and transmission systems in commercial vehicles have unique calibration and programming requirements.\n\nTexa's truck diagnostic coverage is among the most comprehensive available, supporting major manufacturers including Freightliner, Kenworth, Peterbilt, Volvo, Mack, International, and many more. The Deluxe Fleet Package is specifically designed for shops and fleets that work on commercial vehicles, providing the deep system access and specialized functions that truck diagnostics demand."
+  },
+  {
+    "id": 70,
+    "title": "The Future of Connected Vehicles and Remote Diagnostics",
+    "date": "2026-05-15",
+    "author": "Mike Miller",
+    "category": "Industry News",
+    "excerpt": "Connected vehicle technology is opening the door to remote diagnostics, where shops can monitor vehicle health and diagnose issues without the vehicle being physically present....",
+    "content": "Connected vehicle technology is opening the door to remote diagnostics, where shops can monitor vehicle health and diagnose issues without the vehicle being physically present.\n\nTelematics systems in modern vehicles continuously monitor vehicle systems and can transmit diagnostic information over cellular networks. This technology enables fleet managers to receive real-time alerts when a vehicle develops a fault, allowing them to schedule service proactively rather than waiting for a breakdown.\n\nTexa is at the forefront of connected diagnostic technology, developing solutions that bridge the gap between remote monitoring and in-shop diagnostics. As connected vehicle technology matures, shops that are already equipped with Texa diagnostic platforms will be well-positioned to offer remote diagnostic services as an additional revenue stream."
+  },
+  {
+    "id": 69,
+    "title": "Common Diagnostic Mistakes and How to Avoid Them",
+    "date": "2026-05-14",
+    "author": "Mike Miller",
+    "category": "Tips & Tricks",
+    "excerpt": "Even experienced technicians make diagnostic mistakes that cost time and money. Here are the most common pitfalls and how to avoid them....",
+    "content": "Even experienced technicians make diagnostic mistakes that cost time and money. Here are the most common pitfalls and how to avoid them.\n\nThe number one mistake is parts-swapping instead of diagnosing. Replacing parts based on a code without verifying the root cause wastes money and often does not fix the problem. Always follow a logical diagnostic process: read the code, understand what it means, test the circuit or component, and verify the repair.\n\nAnother common mistake is ignoring related codes. When multiple fault codes are present, they often point to a single root cause. For example, multiple communication codes might indicate a CAN bus wiring issue rather than multiple module failures. Texa's diagnostic tools help by presenting codes in a logical order and providing guided troubleshooting that considers the relationships between different faults."
+  },
+  {
+    "id": 68,
+    "title": "Texa Marine Diagnostics: Beyond the Road",
+    "date": "2026-05-13",
+    "author": "Mike Miller",
+    "category": "Product Spotlights",
+    "excerpt": "Texa's diagnostic capabilities extend beyond cars and trucks to include comprehensive marine vessel diagnostics. For shops near waterways or marinas, this opens up an entirely new revenue stream....",
+    "content": "Texa's diagnostic capabilities extend beyond cars and trucks to include comprehensive marine vessel diagnostics. For shops near waterways or marinas, this opens up an entirely new revenue stream.\n\nMarine engines share many similarities with automotive engines but also have unique systems including marine transmissions, stern drives, jet drives, and specialized cooling systems. Texa's marine diagnostic coverage includes major manufacturers like Mercury, Yamaha, Honda, Suzuki, and Volvo Penta.\n\nThe marine diagnostic market is particularly attractive because there are far fewer shops equipped to handle electronic marine diagnostics compared to the automotive market. This means less competition and the ability to charge premium rates. If your shop is located anywhere near a lake, river, or coast, adding marine diagnostic capabilities with Texa could significantly boost your revenue."
+  },
+  {
+    "id": 67,
+    "title": "Building a Preventive Maintenance Program with Texa",
+    "date": "2026-05-12",
+    "author": "Mike Miller",
+    "category": "Tips & Tricks",
+    "excerpt": "Preventive maintenance is the cornerstone of fleet reliability. Texa's diagnostic tools and fleet management features make building and executing a preventive maintenance program easier than ever....",
+    "content": "Preventive maintenance is the cornerstone of fleet reliability. Texa's diagnostic tools and fleet management features make building and executing a preventive maintenance program easier than ever.\n\nA good preventive maintenance program starts with regular diagnostic scans. By scanning each vehicle on a set schedule, you can catch developing issues before they cause breakdowns. Texa's fleet management features allow you to set maintenance intervals, track service history, and generate reports that show fleet health trends over time.\n\nThe cost savings from preventive maintenance are well documented. Industry studies consistently show that every dollar spent on preventive maintenance saves between three and five dollars in reactive repair costs. When you factor in the additional savings from reduced downtime and extended vehicle life, the case for a professional preventive maintenance program becomes overwhelming."
+  },
+  {
+    "id": 66,
+    "title": "Hybrid Vehicle Diagnostics: Bridging Two Worlds",
+    "date": "2026-05-11",
+    "author": "Mike Miller",
+    "category": "EV Diagnostics",
+    "excerpt": "Hybrid vehicles combine internal combustion engines with electric drive systems, creating unique diagnostic challenges that require expertise in both traditional and EV technologies....",
+    "content": "Hybrid vehicles combine internal combustion engines with electric drive systems, creating unique diagnostic challenges that require expertise in both traditional and EV technologies.\n\nDiagnosing a hybrid vehicle means understanding how the two powertrains work together. The hybrid control module manages the interaction between the engine and electric motor, deciding when to use each and when to blend them. Issues can arise in either system or in the control logic that manages their interaction.\n\nTexa diagnostic tools provide comprehensive hybrid coverage, allowing technicians to diagnose both the ICE and electric sides of the powertrain. This includes high-voltage battery analysis, motor and inverter testing, regenerative braking diagnostics, and traditional engine diagnostics. Having a single tool that covers both worlds is essential for efficiently diagnosing hybrid vehicles."
+  },
+  {
+    "id": 65,
+    "title": "The Importance of Software Updates for Diagnostic Tools",
+    "date": "2026-05-10",
+    "author": "Mike Miller",
+    "category": "Tips & Tricks",
+    "excerpt": "A diagnostic tool is only as good as its software. Outdated software means missing vehicle coverage, unresolved bugs, and inability to access the latest diagnostic functions....",
+    "content": "A diagnostic tool is only as good as its software. Outdated software means missing vehicle coverage, unresolved bugs, and inability to access the latest diagnostic functions.\n\nSome diagnostic tool manufacturers charge hefty annual fees for software updates, and some only release updates quarterly or even annually. In an industry where new vehicles are constantly being released, this means your tool may not support vehicles that are already in your customers' driveways.\n\nTexa takes a different approach with frequent over-the-air updates delivered wirelessly to your diagnostic tool. When new vehicle coverage is added or new diagnostic functions are developed, you receive them automatically. This ensures your Texa tool is always current and always ready for whatever vehicle comes through your door."
+  },
+  {
     "id": 64,
     "title": "EV Charging Infrastructure and What It Means for Shops",
     "date": "2026-05-09",
