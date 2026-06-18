@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0KMCQ4Z34R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0KMCQ4Z34R');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scan Tool Data Logging: Capturing Intermittent Problems | ProAutoTek.com</title>
+  <meta name="description" content="Data logging captures vehicle behavior over time to diagnose intermittent problems that don't appear during shop testing. Master this essential skill." />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #111;
+  }
+  .nav-container { padding: 12px 0 8px; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .nav-logo { display: flex; align-items: center; }
+  .nav-links { justify-content: center; gap: 32px; } .nav-links li a { font-size: 1.15rem; font-weight: 700; }
+  .nav-phone { font-size: 1.15rem; font-weight: 800; }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .nav-container { flex-direction: column; gap: 10px; }
+    .nav-logo img { height: 200px !important; }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 8px; }
+    .nav-links li a { font-size: 0.95rem !important; }
+    .products-grid { grid-template-columns: 1fr !important; gap: 16px; }
+    .card { padding: 20px !important; }
+    .card h3 { font-size: 1.3rem !important; }
+    .card p { font-size: 1rem !important; }
+    .section-header-orange { font-size: 1.5rem !important; }
+    h1 { font-size: 1.5rem !important; }
+    .hero-badge, .hero-badge a { font-size: 0.9rem !important; }
+    .btn { padding: 12px 24px !important; font-size: 1rem !important; }
+  }
+  @media (max-width: 480px) {
+    .nav-logo img { height: 150px !important; }
+    .products-grid { padding: 0 8px; }
+    .card { padding: 16px !important; }
+  }
+</style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="../../index.html" class="nav-logo">Security Solutions</a>
+      <ul class="nav-links">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../products.html">Products</a></li>
+        <li><a href="../../videos.html">Videos</a></li>
+        <li><a href="../../blog.html">Blog</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+        <li><a href="tel:3149223083" class="nav-phone">314-922-3083</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section section-black">
+    <div class="container blog-container">
+      <article class="blog-post">
+        <div class="blog-date">June 17, 2026</div>
+        <h1>Scan Tool Data Logging: Capturing Intermittent Problems</h1>
+        <p class="blog-author">By Mike Miller</p>
+        <p>
+          Some problems refuse to appear when you're watching. The customer describes a stumble under 
+          acceleration, but the vehicle runs perfectly in the shop. The check engine light illuminated 
+          last week but isn't on now. These intermittent problems frustrate technicians and customers 
+          alike. Data logging is the solution—recording vehicle behavior over time until the problem 
+          reveals itself.
+        </p>
+        <p>
+          <strong>What Is Data Logging?</strong> Data logging records selected PIDs (parameter identifiers) 
+          to a file while the vehicle operates. Unlike live data viewing, which shows only the current 
+          moment, logging captures everything over an extended period. When the problem occurs, the 
+          logged data shows exactly what happened before, during, and after the event.
+        </p>
+        <p>
+          <strong>When to Use Data Logging:</strong> Deploy data logging when the problem doesn't occur 
+          during test drives with the scan tool connected, when symptoms are heat-related (requiring 
+          extended driving), when specific driving conditions trigger the fault (highway speeds, heavy 
+          load, etc.), or when the customer reports symptoms you can't reproduce.
+        </p>
+        <p>
+          <strong>Selecting PIDs to Log:</strong> You can't log everything—data files become unmanageable 
+          and important information gets buried. Select PIDs relevant to the reported symptom. For a 
+          misfire concern: RPM, MAF, fuel trims, ignition timing, knock sensor, and individual cylinder 
+          misfire counts. For a transmission concern: input/output speeds, line pressure, solenoid 
+          commands, and temperature. Focus on 8-15 PIDs maximum.
+        </p>
+        <p>
+          <strong>Sample Rate Considerations:</strong> Higher sample rates capture faster events but create 
+          larger files. For engine performance issues, 10-20 samples per second captures most events. 
+          Transmission shift quality analysis may need 50+ samples per second. Slow symptoms (overheating, 
+          fuel economy) can use 1 sample per second over hours. Match sample rate to the suspected problem speed.
+        </p>
+        <p>
+          <strong>Setting Up the Log:</strong> Configure your diagnostic tool for continuous logging with 
+          timestamps. Some tools allow triggered recording—logging only starts when a specific condition 
+          occurs (RPM exceeds threshold, code sets, etc.). Triggered logging preserves storage but requires 
+          knowing what condition to trigger on. For unknown problems, continuous logging is safer.
+        </p>
+        <p>
+          <strong>Instructing the Customer:</strong> If the customer takes the vehicle for logging, provide 
+          clear instructions. Explain what driving conditions to replicate. Show them how the tool connects 
+          (OBD-II port) and where to position it securely. Set realistic expectations—the problem may take 
+          days to capture. Get consent for extended equipment loan.
+        </p>
+        <p>
+          <strong>Analyzing Logged Data:</strong> Once you have data, the real work begins. Use graphing 
+          features to visualize multiple PIDs simultaneously. Look for correlations—when the symptom 
+          occurs (customer notes help), what else changed? Spikes, dropouts, and parameter relationships 
+          reveal the root cause. A fuel trim spike correlating with a specific RPM range points to 
+          airflow measurement issues at that condition.
+        </p>
+        <p>
+          <strong>Professional Tools Make the Difference:</strong> TEXA diagnostic platforms include 
+          advanced data logging with graphing, export, and analysis features. Log directly to the device 
+          or connected computer. Export to CSV for spreadsheet analysis. Overlay multiple data channels 
+          on one graph. These features transform raw data into diagnostic answers.
+        </p>
+        <p>
+          Data logging separates professionals from parts changers. Instead of guessing, you capture 
+          evidence. Instead of replacing components hoping to fix intermittent problems, you identify 
+          the actual failure. The technique takes patience but delivers results—and customers remember 
+          the shop that finally fixed the problem everyone else couldn't.
+        </p>
+      </article>
+      <p style="margin-top: 30px;"><a href="../../blog.html" style="color: #7c3aed;">← Back to Blog</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo">Security Solutions</div>
+        <p class="footer-text">Professional TEXA diagnostic equipment available nationwide through ProAutoTek.com</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-list">
+          <li>314-922-3083</li>
+          <li>info@ProAutoTek.com</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Coverage</h4>
+        <ul class="footer-list">
+          <li>Nationwide Coverage</li>
+          <li>U.S. Based Tech Support</li>
+          <li>English Speaking Support</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Security Solutions | ProAutoTek.com
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0KMCQ4Z34R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0KMCQ4Z34R');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EV Thermal Management Diagnostics: Battery Cooling Systems | ProAutoTek.com</title>
+  <meta name="description" content="Electric vehicle thermal management systems are critical for battery life and performance. Learn to diagnose cooling pumps, heat exchangers, and thermal sensors." />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #111;
+  }
+  .nav-container { padding: 12px 0 8px; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .nav-logo { display: flex; align-items: center; }
+  .nav-links { justify-content: center; gap: 32px; } .nav-links li a { font-size: 1.15rem; font-weight: 700; }
+  .nav-phone { font-size: 1.15rem; font-weight: 800; }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .nav-container { flex-direction: column; gap: 10px; }
+    .nav-logo img { height: 200px !important; }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 8px; }
+    .nav-links li a { font-size: 0.95rem !important; }
+    .products-grid { grid-template-columns: 1fr !important; gap: 16px; }
+    .card { padding: 20px !important; }
+    .card h3 { font-size: 1.3rem !important; }
+    .card p { font-size: 1rem !important; }
+    .section-header-orange { font-size: 1.5rem !important; }
+    h1 { font-size: 1.5rem !important; }
+    .hero-badge, .hero-badge a { font-size: 0.9rem !important; }
+    .btn { padding: 12px 24px !important; font-size: 1rem !important; }
+  }
+  @media (max-width: 480px) {
+    .nav-logo img { height: 150px !important; }
+    .products-grid { padding: 0 8px; }
+    .card { padding: 16px !important; }
+  }
+</style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="../../index.html" class="nav-logo">Security Solutions</a>
+      <ul class="nav-links">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../products.html">Products</a></li>
+        <li><a href="../../videos.html">Videos</a></li>
+        <li><a href="../../blog.html">Blog</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+        <li><a href="tel:3149223083" class="nav-phone">314-922-3083</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section section-black">
+    <div class="container blog-container">
+      <article class="blog-post">
+        <div class="blog-date">June 14, 2026</div>
+        <h1>EV Thermal Management Diagnostics: Battery Cooling Systems</h1>
+        <p class="blog-author">By Mike Miller</p>
+        <p>
+          Electric vehicle batteries operate within strict temperature ranges. Too hot and they degrade rapidly, 
+          reducing range and lifespan. Too cold and they can't deliver full power. Thermal management systems 
+          maintain optimal battery temperature, and when they fail, expensive problems follow. Shops that master 
+          EV thermal diagnostics capture high-value service work.
+        </p>
+        <p>
+          <strong>How EV Thermal Management Works:</strong> Most EVs use liquid cooling circuits that circulate 
+          coolant through channels in the battery pack. Electric pumps move the coolant, heat exchangers transfer 
+          heat to the AC system or ambient air, and multiple temperature sensors monitor conditions throughout. 
+          Some systems include heating elements for cold-weather preconditioning. The battery management system 
+          (BMS) controls everything based on temperature readings.
+        </p>
+        <p>
+          <strong>Common Thermal System Components:</strong> Electric coolant pumps (often multiple), thermal 
+          expansion valves, battery pack temperature sensors (sometimes dozens per pack), radiators or heat 
+          exchangers, electric heaters for cold starts, coolant control valves, and dedicated cooling fans. Each 
+          component can fail independently, and diagnosing which one requires proper scan tool access.
+        </p>
+        <p>
+          <strong>Diagnostic Approach:</strong> Start with a full system scan focusing on thermal management codes. 
+          Modern TEXA diagnostic tools provide detailed access to EV-specific parameters: individual sensor readings, 
+          pump operation status, valve positions, and historical temperature data. Look for temperature sensor 
+          disagreements (one reading wildly different from neighbors), pump flow rates below specification, or valve 
+          positions that don't match commanded states.
+        </p>
+        <p>
+          <strong>Critical Live Data:</strong> Monitor battery inlet and outlet coolant temperatures during operation. 
+          A healthy system shows temperature rise across the pack during charging or heavy use, with the cooling system 
+          responding to maintain target temperatures. Watch for pumps that cycle on but show no temperature change 
+          (possible flow blockage) or systems that run constantly but can't control temperatures (undersized or 
+          failing heat exchanger).
+        </p>
+        <p>
+          <strong>Pump Diagnostics:</strong> EV coolant pumps are typically brushless DC motors with integrated 
+          controllers. Failures include bearing wear, impeller damage, and controller failures. Use bi-directional 
+          controls to command pump operation and verify flow with pressure gauges or flow meters. Some diagnostic 
+          tools show pump current draw—high current with low flow indicates mechanical resistance.
+        </p>
+        <p>
+          <strong>Sensor Testing:</strong> Battery packs contain numerous temperature sensors—some vehicles have 
+          20+ sensors across the pack. A single failed sensor can trigger thermal management codes or cause the 
+          BMS to limit performance. Compare sensor readings in similar locations; outliers indicate failed sensors. 
+          Resistance checks against manufacturer specifications confirm sensor health.
+        </p>
+        <p>
+          <strong>Why This Matters for Shops:</strong> Thermal management failures affect EV range, charging speed, 
+          and battery longevity. Customers notice reduced range or slow charging before complete system failure. 
+          Shops that can diagnose these issues accurately—rather than guessing at expensive battery replacements—build 
+          reputation and capture repeat business. Thermal management diagnosis is specialized work that commands 
+          premium labor rates.
+        </p>
+      </article>
+      <p style="margin-top: 30px;"><a href="../../blog.html" style="color: #7c3aed;">← Back to Blog</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo">Security Solutions</div>
+        <p class="footer-text">Professional TEXA diagnostic equipment available nationwide through ProAutoTek.com</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-list">
+          <li>314-922-3083</li>
+          <li>info@ProAutoTek.com</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Coverage</h4>
+        <ul class="footer-list">
+          <li>Nationwide Coverage</li>
+          <li>U.S. Based Tech Support</li>
+          <li>English Speaking Support</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Security Solutions | ProAutoTek.com
+    </div>
+  </footer>
+</body>
+</html>
