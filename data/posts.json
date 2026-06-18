@@ -1,5 +1,50 @@
 [
   {
+    "id": 103,
+    "title": "EV Charging Infrastructure and What It Means for Shops",
+    "date": "2026-06-18",
+    "author": "Mike Miller",
+    "category": "EV Diagnostics",
+    "excerpt": "As EV charging infrastructure expands rapidly across the country, shops need to understand how charging systems work and how to diagnose charging-related issues....",
+    "content": "As EV charging infrastructure expands rapidly across the country, shops need to understand how charging systems work and how to diagnose charging-related issues.\n\nEV owners frequently report charging problems, and these issues can stem from the vehicle's onboard charger, the charging cable, the EVSE (charging station), or the vehicle's battery management system. Being able to diagnose which component is causing the issue requires specialized knowledge and tools.\n\nTexa's EV diagnostic capabilities include comprehensive charging system analysis. Technicians can monitor charging parameters in real time, test the onboard charger's performance, verify communication between the vehicle and the EVSE, and diagnose battery management system faults that may prevent charging. As EVs become more common, charging diagnostics will become a regular service that shops need to provide."
+  },
+  {
+    "id": 102,
+    "title": "Maximizing Shop Revenue with Professional Diagnostic Tools",
+    "date": "2026-06-17",
+    "author": "Mike Miller",
+    "category": "Industry News",
+    "excerpt": "Investing in professional diagnostic equipment is not an expense \u2014 it is a revenue generator. The right tools allow your shop to take on more jobs, complete them faster, and charge premium rates....",
+    "content": "Investing in professional diagnostic equipment is not an expense \u2014 it is a revenue generator. The right tools allow your shop to take on more jobs, complete them faster, and charge premium rates.\n\nConsider this: every vehicle you turn away because your scan tool does not support it is lost revenue. Every hour your technician spends struggling with a slow or limited diagnostic tool is lost productivity. Every job you send to the dealer because you cannot perform the required programming or calibration is money walking out your door.\n\nTexa diagnostic tools are designed to maximize your shop's capabilities. With the broadest vehicle coverage, fastest hardware, and deepest system access available, Texa allows you to say yes to more jobs and complete them efficiently. The return on investment typically comes within months, not years."
+  },
+  {
+    "id": 101,
+    "title": "Diesel Diagnostics: What Makes Texa Stand Out",
+    "date": "2026-06-16",
+    "author": "Mike Miller",
+    "category": "Product Spotlights",
+    "excerpt": "Diesel vehicles present unique diagnostic challenges that many scan tools handle poorly. Texa has deep roots in diesel diagnostics, particularly for heavy trucks and commercial vehicles....",
+    "content": "Diesel vehicles present unique diagnostic challenges that many scan tools handle poorly. Texa has deep roots in diesel diagnostics, particularly for heavy trucks and commercial vehicles.\n\nDiesel engines rely on high-pressure fuel injection systems, turbocharger systems, exhaust aftertreatment systems including DPF and SCR, and complex engine management systems. Diagnosing these systems requires specialized knowledge and tools that can access manufacturer-specific parameters and run active tests.\n\nTexa's diagnostic platforms provide comprehensive diesel coverage including forced DPF regeneration, injector coding, turbo actuator testing, AdBlue system diagnostics, and detailed fuel system analysis. For shops that work on diesel trucks and commercial vehicles, Texa is widely considered the go-to diagnostic solution."
+  },
+  {
+    "id": 100,
+    "title": "How Texa Supports Independent Shops Against Dealers",
+    "date": "2026-06-15",
+    "author": "Mike Miller",
+    "category": "Industry News",
+    "excerpt": "Independent repair shops have long faced a competitive disadvantage when it comes to diagnostic capabilities. Dealer tools have historically offered deeper access and more advanced functions. Texa is ...",
+    "content": "Independent repair shops have long faced a competitive disadvantage when it comes to diagnostic capabilities. Dealer tools have historically offered deeper access and more advanced functions. Texa is closing that gap.\n\nTexa's comprehensive vehicle coverage and deep system access give independent shops the ability to perform many of the same diagnostic and programming functions that were previously only available at the dealer. This includes module coding, key programming, injector coding, DPF regeneration, and many other advanced procedures.\n\nThe Right to Repair movement has made significant progress in ensuring that independent shops have access to the same diagnostic information as dealers. Texa has been a strong supporter of this movement, and their diagnostic platforms reflect that commitment by providing the broadest possible access to vehicle systems across all makes and models."
+  },
+  {
+    "id": 99,
+    "title": "Understanding CAN Bus Networks in Modern Vehicles",
+    "date": "2026-06-14",
+    "author": "Mike Miller",
+    "category": "Tips & Tricks",
+    "excerpt": "The Controller Area Network bus is the backbone of modern vehicle electronics. Understanding how CAN bus works is essential for any technician working on vehicles built in the last two decades....",
+    "content": "The Controller Area Network bus is the backbone of modern vehicle electronics. Understanding how CAN bus works is essential for any technician working on vehicles built in the last two decades.\n\nCAN bus allows electronic control modules to communicate with each other over a shared network. Instead of dedicated wiring between every module, CAN bus uses two wires \u2014 CAN High and CAN Low \u2014 to carry messages between all modules on the network. This dramatically reduces wiring complexity but means that a fault on the bus can affect multiple systems.\n\nTexa diagnostic tools provide advanced CAN bus analysis capabilities, allowing technicians to monitor bus communication in real time, identify modules that are not responding, and detect electrical faults on the bus wiring. This is particularly valuable for diagnosing communication fault codes, which are among the most challenging issues technicians face."
+  },
+  {
     "id": 98,
     "title": "Preparing Your Shop for R1234yf AC Service",
     "date": "2026-06-13",
