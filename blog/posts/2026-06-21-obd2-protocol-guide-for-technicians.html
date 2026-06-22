@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OBD2 protocol guide for technicians: CAN, K-Line, and more | ProAutoTek</title>
+  <meta name="description" content="Master the different OBD2 communication protocols including CAN, K-Line, ISO 9141, and J1850. Essential knowledge for modern automotive diagnostics.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    :root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;--accent:#58a6ff;--accent2:#3fb950}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    .wrap{max-width:800px;margin:0 auto;padding:20px}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);margin-bottom:24px}
+    .logo{font-weight:700;font-size:18px;color:var(--accent)}
+    .back{color:var(--muted);text-decoration:none;font-size:14px}
+    .back:hover{color:var(--accent)}
+    article{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+    h1{margin:0 0 8px;font-size:28px;color:#fff}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:20px}
+    p{margin:0 0 16px}
+    h2{color:#fff;font-size:20px;margin:24px 0 12px;padding-top:16px;border-top:1px solid var(--border)}
+    ul{margin:0 0 16px;padding-left:20px}
+    li{margin-bottom:8px}
+    code{background:#21262d;padding:2px 6px;border-radius:4px;font-size:14px}
+    .highlight{background:linear-gradient(135deg,rgba(88,166,255,0.1),rgba(63,185,80,0.1));border:1px solid var(--border);border-radius:8px;padding:16px;margin:16px 0}
+    .cta{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+    .btn{padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;font-size:14px}
+    .btn.primary{background:var(--accent);color:#0d1117}
+    .btn.secondary{background:var(--card);color:var(--text);border:1px solid var(--border)}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav">
+    <a class="logo" href="/">🔧 ProAutoTek</a>
+    <a class="back" href="/blog.html">← Back to Blog</a>
+  </nav>
+  
+  <article>
+    <h1>OBD2 protocol guide for technicians</h1>
+    <p class="meta">June 21, 2026 · 6 min read · Diagnostics</p>
+
+    <p>Understanding OBD2 communication protocols is fundamental for any technician working with modern diagnostic tools. While your scan tool typically handles protocol selection automatically, knowing how these protocols work helps you troubleshoot communication issues and understand what's happening behind the scenes.</p>
+
+    <h2>The five OBD2 protocols</h2>
+    <p>OBD2 vehicles manufactured since 1996 use one of five communication protocols. Here's what you need to know about each:</p>
+
+    <h2>CAN (Controller Area Network)</h2>
+    <p>Since 2008, CAN has been mandatory for all vehicles sold in the US, making it the dominant protocol you'll encounter today.</p>
+    <ul>
+      <li><strong>Speed:</strong> 250 kbps or 500 kbps (high-speed CAN)</li>
+      <li><strong>Pins used:</strong> 6 (CAN High) and 14 (CAN Low)</li>
+      <li><strong>Key advantage:</strong> Fast, reliable, supports multiple modules on one bus</li>
+      <li><strong>Common in:</strong> All post-2008 US vehicles, many European vehicles since early 2000s</li>
+    </ul>
+    
+    <div class="highlight">
+      <strong>💡 Tip:</strong> CAN uses differential signaling—if you're not getting communication, check both CAN High and CAN Low lines. A single broken wire can kill the whole bus.
+    </div>
+
+    <h2>ISO 15765-4 (CAN-based OBD)</h2>
+    <p>This is the standardized implementation of CAN for OBD2. It defines how diagnostic messages should be formatted and transmitted over CAN.</p>
+    <ul>
+      <li>Uses 11-bit or 29-bit message identifiers</li>
+      <li>Standard request ID: <code>0x7DF</code> (broadcast) or <code>0x7E0-0x7E7</code> (direct)</li>
+      <li>Response IDs: <code>0x7E8-0x7EF</code></li>
+    </ul>
+
+    <h2>ISO 9141-2</h2>
+    <p>Common in European and Asian vehicles from 1996-2004.</p>
+    <ul>
+      <li><strong>Speed:</strong> 10.4 kbps</li>
+      <li><strong>Pin used:</strong> 7 (K-Line)</li>
+      <li><strong>Initialization:</strong> 5-baud init sequence at 5 bps</li>
+      <li><strong>Common in:</strong> Chrysler, European, Asian vehicles (pre-CAN)</li>
+    </ul>
+
+    <h2>ISO 14230-4 (KWP2000)</h2>
+    <p>An evolution of ISO 9141, offering faster communication and more features.</p>
+    <ul>
+      <li><strong>Speed:</strong> 10.4 kbps (fast init available)</li>
+      <li><strong>Pins used:</strong> 7 (K-Line), optionally 15 (L-Line)</li>
+      <li><strong>Initialization:</strong> 5-baud or fast init</li>
+      <li><strong>Common in:</strong> Many 2003-2008 vehicles, some European vehicles still use it for manufacturer-specific functions</li>
+    </ul>
+
+    <h2>SAE J1850 PWM</h2>
+    <p>Pulse Width Modulation protocol, primarily used by Ford.</p>
+    <ul>
+      <li><strong>Speed:</strong> 41.6 kbps</li>
+      <li><strong>Pins used:</strong> 2 (J1850+) and 10 (J1850-)</li>
+      <li><strong>Common in:</strong> Ford vehicles 1996-2008</li>
+    </ul>
+
+    <h2>SAE J1850 VPW</h2>
+    <p>Variable Pulse Width protocol, used by GM.</p>
+    <ul>
+      <li><strong>Speed:</strong> 10.4 kbps</li>
+      <li><strong>Pin used:</strong> 2 (J1850+)</li>
+      <li><strong>Common in:</strong> GM vehicles 1996-2008</li>
+    </ul>
+
+    <h2>Troubleshooting communication issues</h2>
+    <p>When your scan tool won't communicate:</p>
+    <ul>
+      <li><strong>Check power:</strong> Pin 16 (battery +) and Pin 4/5 (ground) must have proper voltage</li>
+      <li><strong>Verify protocol pins:</strong> Use a multimeter to check for activity on protocol-specific pins</li>
+      <li><strong>Check for DTCs:</strong> Some modules won't communicate if the bus is down due to a fault</li>
+      <li><strong>Try different baud rates:</strong> Some older vehicles may need manual protocol selection</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>🔧 Pro tip:</strong> A DLC breakout box is invaluable for diagnosing communication issues. It lets you monitor individual pins while connected to the vehicle.
+    </div>
+
+    <div class="cta">
+      <a class="btn primary" href="/products.html">Shop diagnostic tools →</a>
+      <a class="btn secondary" href="/support.html">Get tech support</a>
+    </div>
+  </article>
+</div>
+</body>
+</html>
