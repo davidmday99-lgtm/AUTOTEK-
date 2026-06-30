@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EV/hybrid diagnostics guide: Battery to motor system troubleshooting | ProAutoTek</title>
+  <meta name="description" content="Master EV and hybrid vehicle diagnostics. Learn about high-voltage systems, battery monitoring, motor controllers, and hybrid-specific DTCs.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    :root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;--accent:#58a6ff;--accent2:#3fb950}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    .wrap{max-width:800px;margin:0 auto;padding:20px}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);margin-bottom:24px}
+    .logo{font-weight:700;font-size:18px;color:var(--accent)}
+    .back{color:var(--muted);text-decoration:none;font-size:14px}
+    .back:hover{color:var(--accent)}
+    article{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+    h1{margin:0 0 8px;font-size:28px;color:#fff}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:20px}
+    p{margin:0 0 16px}
+    h2{color:#fff;font-size:20px;margin:24px 0 12px;padding-top:16px;border-top:1px solid var(--border)}
+    ul{margin:0 0 16px;padding-left:20px}
+    li{margin-bottom:8px}
+    code{background:#21262d;padding:2px 6px;border-radius:4px;font-size:14px}
+    .highlight{background:linear-gradient(135deg,rgba(88,166,255,0.1),rgba(63,185,80,0.1));border:1px solid var(--border);border-radius:8px;padding:16px;margin:16px 0}
+    .cta{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+    .btn{padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;font-size:14px}
+    .btn.primary{background:var(--accent);color:#0d1117}
+    .btn.secondary{background:var(--card);color:var(--text);border:1px solid var(--border)}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav">
+    <a class="logo" href="/">🔧 ProAutoTek</a>
+    <a class="back" href="/blog.html">← Back to Blog</a>
+  </nav>
+  
+  <article>
+    <h1>EV/hybrid diagnostics guide</h1>
+    <p class="meta">June 25, 2026 · 9 min read · Electric Vehicles</p>
+
+    <p>Electric and hybrid vehicles are rapidly becoming mainstream, and technicians who understand their unique diagnostic needs will command premium labor rates. The fundamentals are similar to conventional vehicles, but there are critical differences in high-voltage systems, battery management, and electric motor control.</p>
+
+    <h2>The shift from combustion to electric: What's different?</h2>
+    <p>EV and hybrid diagnostics require new skills but leverage familiar principles:</p>
+    <ul>
+      <li><strong>High-voltage systems:</strong> 400V-1000V present safety hazards—require proper PPE and training</li>
+      <li><strong>No fuel, no spark:</strong> Powerplant diagnostics are different. No O2 sensors, no fuel injectors</li>
+      <li><strong>Battery-centric:</strong> Battery health and charge state drive most system behavior</li>
+      <li><strong>Efficiency monitors:</strong> Regeneration data, motor efficiency, thermal management critical to diagnostics</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>⚠️ Safety first:</strong> High-voltage work requires manufacturer-specific training and certification. Never work on HV systems without proper credentials and equipment. This guide focuses on diagnostics, not repairs.
+    </div>
+
+    <h2>Key EV/hybrid systems you'll diagnose</h2>
+
+    <h2>1. High-Voltage Battery Pack</h2>
+    <ul>
+      <li><strong>What it stores:</strong> 40–150 kWh depending on vehicle class</li>
+      <li><strong>Monitoring:</strong> Battery Management System (BMS) continuously tracks voltage, current, temperature, cell balance</li>
+      <li><strong>Diagnostics:</strong> Check state of charge (SoC), state of health (SoH), individual cell voltages</li>
+    </ul>
+
+    <p><strong>Common faults:</strong></p>
+    <ul>
+      <li>Cell imbalance (one cell weaker than others)</li>
+      <li>Temperature sensor failures</li>
+      <li>High-voltage contactor stuck or welded</li>
+      <li>Battery degradation (SoH drops below threshold)</li>
+    </ul>
+
+    <h2>2. Electric Motor/Motor Controller</h2>
+    <p>The motor is your new "engine." It's highly reliable but integrated with power electronics.</p>
+    <ul>
+      <li><strong>Motor types:</strong> Permanent magnet AC (common), induction motors (some Tesla models)</li>
+      <li><strong>Controller:</strong> Inverter converts DC battery power to 3-phase AC for the motor</li>
+      <li><strong>Diagnostics:</strong> Check motor current draw, phase balance, thermal management</li>
+    </ul>
+
+    <h2>3. Thermal Management System</h2>
+    <p>EVs produce less heat than combustion engines but need sophisticated cooling.</p>
+    <ul>
+      <li><strong>Components:</strong> Coolant loop for battery (primary), motor (secondary), cabin HVAC</li>
+      <li><strong>Integrated liquid cooler:</strong> Often combined with DC/DC converter and charger</li>
+      <li><strong>Common issues:</strong> Coolant leaks, pump failures, thermal runaway protection engaged</li>
+    </ul>
+
+    <h2>4. Onboard Charger (Level 2) vs DC Fast Charger</h2>
+    <ul>
+      <li><strong>Onboard:</strong> AC to DC conversion; integrated into vehicle; slower 7–19 kW charging</li>
+      <li><strong>DC Fast Charger:</strong> External infrastructure; bypasses onboard charger; 50–350 kW</li>
+      <li><strong>Diagnostics:</strong> Charging faults often show as "no charge" DTCs; check power availability first</li>
+    </ul>
+
+    <h2>Hybrid-specific diagnostics</h2>
+
+    <h2>Parallel Hybrid (conventional engine + electric motor)</h2>
+    <p>Example: Toyota Prius, Honda Accord Hybrid</p>
+    <ul>
+      <li><strong>Engine still runs:</strong> You'll see conventional diagnostic codes plus hybrid-specific ones</li>
+      <li><strong>Mode switching:</strong> Vehicle switches between EV-only, engine-only, and combined operation</li>
+      <li><strong>Key diagnostic:</strong> Check transmission output speed vs motor speed—mismatches cause mode faults</li>
+    </ul>
+
+    <h2>Series Hybrid (engine powers generator only)</h2>
+    <p>Example: BMW i7, some commercial vehicles</p>
+    <ul>
+      <li><strong>Engine rarely runs:</strong> Primarily charges battery; motor does all propulsion</li>
+      <li><strong>Generator coupling:</strong> Check clutch/coupling engagement (electrical or mechanical)</li>
+    </ul>
+
+    <h2>Plug-in Hybrid (PHEV)</h2>
+    <p>Example: Jeep Grand Cherokee 4xe, Mercedes S580e</p>
+    <ul>
+      <li><strong>Two systems in one:</strong> Full combustion diagnostics + high-voltage battery/motor</li>
+      <li><strong>Mode logic:</strong> EV priority, switch to engine when battery depleted</li>
+      <li><strong>Common issues:</strong> Mode transition faults, battery charger communication</li>
+    </ul>
+
+    <h2>Common EV/hybrid diagnostic trouble codes</h2>
+
+    <h2>P0A00–P0AFF (Hybrid/EV System Codes)</h2>
+    <ul>
+      <li><code>P0A00</code> – Hybrid System Malfunction</li>
+      <li><code>P0A04</code> – Hybrid Battery Communication Error</li>
+      <li><code>P0A14/P0A15</code> – Battery Charge Depleted</li>
+      <li><code>P0A28</code> – Battery Temperature Sensor Range</li>
+      <li><code>P0A80</code> – Hybrid Battery Voltage Sensor Range</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>💡 Tip:</strong> These codes indicate system-level faults. Always check live data (battery voltage, SoC, motor speed) before condemning parts.
+    </div>
+
+    <h2>Diagnostic workflow for EV issues</h2>
+
+    <p><strong>Step 1: Safety first</strong></p>
+    <ul>
+      <li>High-voltage system isolation (key out, wait 5 minutes)</li>
+      <li>Use proper PPE for any HV circuit work</li>
+    </ul>
+
+    <p><strong>Step 2: Scan for DTCs</strong></p>
+    <ul>
+      <li>Read all modules (BMS, motor controller, onboard charger, etc.)</li>
+      <li>Freeze frames can show what triggered the fault</li>
+    </ul>
+
+    <p><strong>Step 3: Battery health check</strong></p>
+    <ul>
+      <li>State of Charge (SoC) – typically 20–80% for normal operation</li>
+      <li>State of Health (SoH) – below 80% signals degradation</li>
+      <li>Individual cell voltages (BMS reports cell balance)</li>
+    </ul>
+
+    <p><strong>Step 4: Monitor operating parameters</strong></p>
+    <ul>
+      <li>Motor current during acceleration (should be smooth, no spikes)</li>
+      <li>Thermal management coolant temp (battery, motor, inverter)</li>
+      <li>Regenerative braking function (if available)</li>
+    </ul>
+
+    <p><strong>Step 5: Test-drive if safe</strong></p>
+    <ul>
+      <li>Check mode transitions (EV to engine on PHEVs)</li>
+      <li>Acceleration smoothness and response</li>
+      <li>Charging behavior (if applicable)</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>🔧 Pro tip:</strong> Many EV issues are actually low-battery-state issues. If diagnostics are ambiguous, charge the vehicle to 100% and retest. You'll be surprised how many "faults" disappear.
+    </div>
+
+    <h2>Training and certification</h2>
+    <p>If you're new to EV diagnostics, consider these learning paths:</p>
+    <ul>
+      <li><strong>Manufacturer training:</strong> Tesla Service Tech, Ford EV, VW ID. programs—free or low-cost</li>
+      <li><strong>Third-party:</strong> ASE EV certification, hybrid diagnostic courses</li>
+      <li><strong>Equipment partners:</strong> Snap-on, Launch, XTOOL offer EV-specific training with scanner purchases</li>
+    </ul>
+
+    <div class="cta">
+      <a class="btn primary" href="/products.html">EV diagnostic tools →</a>
+      <a class="btn secondary" href="/support.html">Get certified training info</a>
+    </div>
+  </article>
+</div>
+</body>
+</html>

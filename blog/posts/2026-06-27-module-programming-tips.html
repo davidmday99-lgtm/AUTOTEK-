@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module programming tips: ECU, BCM, and TCM updates guide | ProAutoTek</title>
+  <meta name="description" content="Complete guide to automotive module programming. Learn when to reprogram, programming safety, common issues, and best practices for in-shop module updates.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    :root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;--accent:#58a6ff;--accent2:#3fb950}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    .wrap{max-width:800px;margin:0 auto;padding:20px}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);margin-bottom:24px}
+    .logo{font-weight:700;font-size:18px;color:var(--accent)}
+    .back{color:var(--muted);text-decoration:none;font-size:14px}
+    .back:hover{color:var(--accent)}
+    article{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+    h1{margin:0 0 8px;font-size:28px;color:#fff}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:20px}
+    p{margin:0 0 16px}
+    h2{color:#fff;font-size:20px;margin:24px 0 12px;padding-top:16px;border-top:1px solid var(--border)}
+    ul{margin:0 0 16px;padding-left:20px}
+    li{margin-bottom:8px}
+    code{background:#21262d;padding:2px 6px;border-radius:4px;font-size:14px}
+    .highlight{background:linear-gradient(135deg,rgba(88,166,255,0.1),rgba(63,185,80,0.1));border:1px solid var(--border);border-radius:8px;padding:16px;margin:16px 0}
+    .cta{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+    .btn{padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;font-size:14px}
+    .btn.primary{background:var(--accent);color:#0d1117}
+    .btn.secondary{background:var(--card);color:var(--text);border:1px solid var(--border)}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav">
+    <a class="logo" href="/">🔧 ProAutoTek</a>
+    <a class="back" href="/blog.html">← Back to Blog</a>
+  </nav>
+  
+  <article>
+    <h1>Module programming tips</h1>
+    <p class="meta">June 27, 2026 · 8 min read · Advanced Diagnostics</p>
+
+    <p>Module programming—updating ECU, BCM, TCM, and other module firmware—is increasingly common. Whether replacing a failed module, updating transmission logic, or fixing a manufacturer-issued software bug, knowing how to program safely and effectively is essential for modern technicians.</p>
+
+    <h2>When module programming is required</h2>
+    <ul>
+      <li><strong>Module replacement:</strong> New ECU, BCM, TCM, IPC must be programmed with VIN and configuration data</li>
+      <li><strong>Manufacturer software updates:</strong> TSBs (Technical Service Bulletins) often call for reprogramming</li>
+      <li><strong>Bug fixes:</strong> Transmission shift issues, engine performance quirks, emission faults</li>
+      <li><strong>Feature updates:</strong> Seat memory, climate presets, infotainment calibration</li>
+      <li><strong>Calibration data:</strong> Speedometer correction, fuel gauge calibration, tire pressure learning</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>⚠️ Important:</strong> Never program a module unless you have the correct software version for that specific VIN and year. Flashing wrong firmware can brick the module or create drivability issues. Always verify before starting.
+    </div>
+
+    <h2>Equipment and connectivity requirements</h2>
+
+    <h2>Minimum setup:</h2>
+    <ul>
+      <li><strong>Quality scan tool:</strong> Must support module reflashing (Launch, Snap-on, NXIQ, etc.)</li>
+      <li><strong>Stable connection:</strong> USB or wireless, but must maintain signal for entire duration</li>
+      <li><strong>Good battery:</strong> Vehicle battery ≥12.5V before starting; keep it charged throughout</li>
+      <li><strong>Backup power:</strong> Many shops use uninterruptible battery connectors or external batteries</li>
+    </ul>
+
+    <h2>Vehicle power management:</h2>
+    <ul>
+      <li><strong>Engine off:</strong> Most programming is done with key in accessory or ignition position, engine off</li>
+      <li><strong>Battery isolation:</strong> Some modules require isolating the negative battery terminal before programming begins</li>
+      <li><strong>Parasitic drain:</strong> Disable radio, infotainment, telematics during programming to conserve power</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>💡 Pro tip:</strong> Use a jump box or auxiliary battery charger connected directly to the battery. This ensures voltage stays stable if parasitic draws dip below minimum. A failed flash due to low voltage can be catastrophic.
+    </div>
+
+    <h2>Programming workflows</h2>
+
+    <h2>OEM online programming (dealership style)</h2>
+    <ul>
+      <li><strong>What it is:</strong> Manufacturer servers host firmware; downloaded during flashing</li>
+      <li><strong>Pros:</strong> Always latest firmware, automatic VIN verification</li>
+      <li><strong>Cons:</strong> Requires internet connection, can be slow, sometimes regional restrictions</li>
+      <li><strong>Examples:</strong> GM TIS2Web, Ford IDS, BMW DIS, Mercedes DTS</li>
+    </ul>
+
+    <h2>Standalone/offline programming</h2>
+    <ul>
+      <li><strong>What it is:</strong> Firmware file sourced locally, no internet required</li>
+      <li><strong>Pros:</strong> Faster, more reliable (no server downtime), works anywhere</li>
+      <li><strong>Cons:</strong> Requires having correct .bin or .hex file beforehand</li>
+      <li><strong>Tools used:</strong> Snap-on Solus, Launch Elite, XTOOL D9</li>
+    </ul>
+
+    <h2>Typical module programming sequence</h2>
+
+    <p><strong>1. Pre-flashing verification:</strong></p>
+    <ul>
+      <li>Record current module configuration (VIN, part number, current software version)</li>
+      <li>Verify correct firmware file matches vehicle year, make, model</li>
+      <li>Check battery voltage and condition</li>
+      <li>Disable unnecessary systems (radio, comfort systems if possible)</li>
+    </ul>
+
+    <p><strong>2. Initiate programming mode:</strong></p>
+    <ul>
+      <li>Connect scan tool to vehicle OBD2 port</li>
+      <li>Navigate to module programming menu</li>
+      <li>Scan tool verifies current module and prompts for firmware selection</li>
+    </ul>
+
+    <p><strong>3. Download and write:</strong></p>
+    <ul>
+      <li>If online: firmware downloads from server (2–10 minutes typical)</li>
+      <li>If offline: tool verifies .bin file matches vehicle</li>
+      <li>Programming begins; display shows progress bar</li>
+      <li><strong>CRITICAL:</strong> Do not interrupt. Power loss here will damage the module.</li>
+    </ul>
+
+    <p><strong>4. Verification:</strong></p>
+    <ul>
+      <li>After programming completes, scan tool verifies checksum and module response</li>
+      <li>New software version displayed; system confirms success</li>
+    </ul>
+
+    <p><strong>5. Calibration and initialization:</strong></p>
+    <ul>
+      <li>For transmission modules: relearn clutch pressure, shift offsets</li>
+      <li>For body modules: initialize power seats, mirror positions, climate settings</li>
+      <li>For engine modules: fuel trim resets, idle relearn may be needed</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>🔧 Critical success factors:</strong> Battery voltage stays above 12.5V, no interruptions during write phase, correct VIN/part number verification before starting, and proper post-programming relearning.
+    </div>
+
+    <h2>Common programming troubleshooting</h2>
+
+    <h2>Flash Failed – Checksum Mismatch</h2>
+    <ul>
+      <li><strong>Cause:</strong> Corrupted download, wrong firmware file, or communication dropout</li>
+      <li><strong>Fix:</strong> Retry download, verify file integrity, check USB connection quality</li>
+    </ul>
+
+    <h2>Module Not Responding</h2>
+    <ul>
+      <li><strong>Cause:</strong> Module already corrupted, OBD2 port issue, dead module</li>
+      <li><strong>Fix:</strong> Check all connections; try different OBD2 ports; verify module power supply before declaring dead</li>
+    </ul>
+
+    <h2>Programming Times Out</h2>
+    <ul>
+      <li><strong>Cause:</strong> Internet lag, module slowness, or CAN bus congestion</li>
+      <li><strong>Fix:</strong> Try offline if available; reduce load on vehicle network (disconnect telematics/modem)</li>
+    </ul>
+
+    <h2>Vehicle won't start after programming</h2>
+    <ul>
+      <li><strong>Cause:</strong> Incomplete initialization, VIN mismatch, or immobilizer conflict</li>
+      <li><strong>Fix:</strong> Reprogram with correct VIN; perform full module initialization sequence; clear DTCs and relearn as needed</li>
+    </ul>
+
+    <h2>Best practices</h2>
+
+    <h2>Documentation</h2>
+    <ul>
+      <li>Record original firmware version before starting</li>
+      <li>Note new firmware version after successful flash</li>
+      <li>Screenshot any diagnostic errors for warranty/audit trail</li>
+      <li>Keep firmware files organized with part numbers and years</li>
+    </ul>
+
+    <h2>Shop setup</h2>
+    <ul>
+      <li><strong>Dedicated programming station:</strong> Keeps vehicles from tying up a full bay</li>
+      <li><strong>Backup power:</strong> Jump box or external battery charger always connected</li>
+      <li><strong>Internet stability:</strong> Hardwired Ethernet or strong WiFi (not customer WiFi)</li>
+      <li><strong>Inventory:</strong> Keep common replacement ECUs, BCMs, TCMs in stock ready to program</li>
+    </ul>
+
+    <h2>Training</h2>
+    <ul>
+      <li>Manufacturer OBD2 programming certification</li>
+      <li>Hands-on training with your specific scan tool</li>
+      <li>Practice on older vehicles before customer work</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>💡 Business insight:</strong> Module programming is a premium-labor service. Charge accordingly (1–2 hours labor minimum per module). The liability and equipment investment justify premium pricing.
+    </div>
+
+    <div class="cta">
+      <a class="btn primary" href="/products.html">Programming-capable scanners →</a>
+      <a class="btn secondary" href="/support.html">Get programming certification</a>
+    </div>
+  </article>
+</div>
+</body>
+</html>

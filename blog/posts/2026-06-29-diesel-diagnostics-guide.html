@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diesel diagnostics guide: Common codes, fuel systems, and emissions testing | ProAutoTek</title>
+  <meta name="description" content="Master diesel engine diagnostics. Learn DPF systems, fuel injection, emissions controls, and diesel-specific DTCs that set them apart from gasoline engines.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    :root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;--accent:#58a6ff;--accent2:#3fb950}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    .wrap{max-width:800px;margin:0 auto;padding:20px}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);margin-bottom:24px}
+    .logo{font-weight:700;font-size:18px;color:var(--accent)}
+    .back{color:var(--muted);text-decoration:none;font-size:14px}
+    .back:hover{color:var(--accent)}
+    article{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+    h1{margin:0 0 8px;font-size:28px;color:#fff}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:20px}
+    p{margin:0 0 16px}
+    h2{color:#fff;font-size:20px;margin:24px 0 12px;padding-top:16px;border-top:1px solid var(--border)}
+    ul{margin:0 0 16px;padding-left:20px}
+    li{margin-bottom:8px}
+    code{background:#21262d;padding:2px 6px;border-radius:4px;font-size:14px}
+    .highlight{background:linear-gradient(135deg,rgba(88,166,255,0.1),rgba(63,185,80,0.1));border:1px solid var(--border);border-radius:8px;padding:16px;margin:16px 0}
+    .cta{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+    .btn{padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;font-size:14px}
+    .btn.primary{background:var(--accent);color:#0d1117}
+    .btn.secondary{background:var(--card);color:var(--text);border:1px solid var(--border)}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav">
+    <a class="logo" href="/">🔧 ProAutoTek</a>
+    <a class="back" href="/blog.html">← Back to Blog</a>
+  </nav>
+  
+  <article>
+    <h1>Diesel diagnostics guide</h1>
+    <p class="meta">June 29, 2026 · 10 min read · Engine Systems</p>
+
+    <p>Diesel engines are back in the American market (Ram 1500, Ford Super Duty, Chevrolet Silverado) and they present unique diagnostic challenges. Higher compression, complex emissions controls, electronic fuel injection at extreme pressures, and aggressive particulate filter systems all require specialized knowledge. Here's what separates diesel diagnostics from gasoline work.</p>
+
+    <h2>Diesel vs. gasoline: The fundamental differences</h2>
+
+    <h2>Ignition and combustion</h2>
+    <ul>
+      <li><strong>Gasoline:</strong> Spark plug fires fuel/air mixture at precise timing</li>
+      <li><strong>Diesel:</strong> No spark plugs; fuel ignites from compression heat (2000+ PSI)</li>
+      <li><strong>Implication:</strong> No ignition timing codes, but compression-related faults are unique</li>
+    </ul>
+
+    <h2>Fuel injection</h2>
+    <ul>
+      <li><strong>Gasoline:</strong> Typically 60–100 PSI</li>
+      <li><strong>Diesel:</strong> 20,000–30,000 PSI (common rail) – precise electronic control critical</li>
+      <li><strong>Implication:</strong> Failed injectors show up immediately; rough idle, smoking exhaust</li>
+    </ul>
+
+    <h2>Emissions control</h2>
+    <ul>
+      <li><strong>Gasoline:</strong> EGR, catalytic converter, O2 sensors</li>
+      <li><strong>Diesel:</strong> DPF (Diesel Particulate Filter), NOx reduction (SCR, DEF systems), EGR cooler</li>
+      <li><strong>Implication:</strong> Diesel faults often involve regeneration cycles and system efficiency</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>💡 Insight:</strong> Diesel owners commonly encounter DPF regeneration warnings. This is often user-driven (highway driving triggers regen) and not always a fault, but diagnostics can determine if the system is working properly.
+    </div>
+
+    <h2>Critical diesel-specific systems</h2>
+
+    <h2>1. Common Rail Fuel Injection</h2>
+    <p>The heart of modern diesel engines.</p>
+    <ul>
+      <li><strong>How it works:</strong> High-pressure pump pressurizes fuel rail to 20,000+ PSI; injectors fire when commanded</li>
+      <li><strong>Electronic control:</strong> PCM controls injection timing, duration, pressure—microsecond precision</li>
+      <li><strong>Common faults:</strong> Leaky injectors (smoking, white/blue exhaust), failed pressure sensor, pump wear</li>
+    </ul>
+
+    <p><strong>Diagnostics approach:</strong></p>
+    <ul>
+      <li>Check fuel rail pressure (live data via scanner)</li>
+      <li>Verify rail pressure reaches minimum 4,000 PSI at idle (varies by engine)</li>
+      <li>Under load, pressure typically 19,000–25,000 PSI</li>
+      <li>Low pressure = weak pump or high-pressure fuel leak</li>
+    </ul>
+
+    <h2>2. Diesel Particulate Filter (DPF)</h2>
+    <p>Captures soot from exhaust; must self-clean periodically.</p>
+    <ul>
+      <li><strong>Regeneration:</strong> Automatic or passive—raises exhaust temp to burn accumulated soot</li>
+      <li><strong>Triggers:</strong> Mileage-based, soot load-based, or driver-initiated (some vehicles)</li>
+      <li><strong>Common issues:</strong> Incomplete regen, clogged filter, forced regen won't clear</li>
+    </ul>
+
+    <p><strong>Live data to monitor:</strong></p>
+    <ul>
+      <li>DPF soot load (% full)</li>
+      <li>Regeneration status (active, complete, failed)</li>
+      <li>Exhaust temperature during regen (should spike to 600°C+)</li>
+      <li>DPF differential pressure (indicates blockage)</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>⚠️ Common misunderstanding:</strong> A DPF warning light doesn't always mean the filter is bad. It often means regeneration is due or incomplete. Clear the code and monitor for re-occurrence before replacing expensive components.
+    </div>
+
+    <h2>3. Selective Catalytic Reduction (SCR) / DEF System</h2>
+    <p>Reduces nitrogen oxides (NOx) emissions using diesel exhaust fluid (DEF).</p>
+    <ul>
+      <li><strong>Diesel Exhaust Fluid (DEF):</strong> 32.5% urea, 67.5% deionized water</li>
+      <li><strong>How it works:</strong> DEF sprayed into hot exhaust; reacts to reduce NOx</li>
+      <li><strong>Common issues:</strong> Low DEF level, DEF quality (contaminated), injector clogging</li>
+    </ul>
+
+    <p><strong>Diagnostics:</strong></p>
+    <ul>
+      <li>Check DEF level (should be at least 10%)</li>
+      <li>Monitor NOx reduction efficiency (typically 90%+ if working)</li>
+      <li>Look for SCR catalyst efficiency faults</li>
+      <li>DEF quality matters—always use approved brand (Shell, Valvoline, Mobil)</li>
+    </ul>
+
+    <h2>4. EGR Cooler</h2>
+    <p>Routes hot exhaust through cooling system to reduce NOx.</p>
+    <ul>
+      <li><strong>Common failure:</strong> Internal corrosion, coolant contamination</li>
+      <li><strong>Symptom:</strong> Rough idle, loss of power, white smoke (coolant leak into combustion)</li>
+      <li><strong>Check:</strong> Visual inspection for external coolant leaks; monitor coolant condition</li>
+    </ul>
+
+    <h2>Common diesel diagnostic codes</h2>
+
+    <h2>P0087 – Fuel Rail Pressure Too Low</h2>
+    <ul>
+      <li><strong>Cause:</strong> Weak fuel pump, pressure sensor failure, fuel leak in rail</li>
+      <li><strong>Check:</strong> Live fuel pressure during cranking (should spike immediately)</li>
+      <li><strong>Next step:</strong> Pressure hold test; if pressure drops, fuel leak suspected</li>
+    </ul>
+
+    <h2>P0088 – Fuel Rail Pressure Too High</h2>
+    <ul>
+      <li><strong>Cause:</strong> Faulty pressure regulator, failed sensor, injector stuck closed</li>
+      <li><strong>Check:</strong> Monitor pressure under load; should stay in operating range</li>
+    </ul>
+
+    <h2>P0236 – Boost Pressure Too High (Turbo)</h2>
+    <ul>
+      <li><strong>Cause:</strong> Wastegate stuck, turbo overboost, intercooler leak</li>
+      <li><strong>Check:</strong> Monitor boost pressure; should peak and taper</li>
+      <li><strong>Visual:</strong> Check turbo connections for vacuum/boost leaks</li>
+    </ul>
+
+    <h2>P02A2 – NOx Sensor Stuck High (SCR System)</h2>
+    <ul>
+      <li><strong>Cause:</strong> Failed sensor, exhaust restriction, SCR catalyst degradation</li>
+      <li><strong>Check:</strong> Monitor NOx reduction from upstream to downstream sensor</li>
+    </ul>
+
+    <h2>P040D – Exhaust Gas Recirculation Temperature High</h2>
+    <ul>
+      <li><strong>Cause:</strong> EGR cooler failure, overheating engine</li>
+      <li><strong>Check:</strong> Monitor coolant temp; inspect EGR cooler visually</li>
+    </ul>
+
+    <h2>P246C – Particulate Filter Regeneration Temperature Insufficient</h2>
+    <ul>
+      <li><strong>Cause:</strong> Driver does short-trip driving (regen never completes), weak spark plugs (if diesel has them), fuel quality issue</li>
+      <li><strong>Solution:</strong> Advise customer to take highway drive (30+ min) to complete regen; or technician can force regen via scanner</li>
+    </ul>
+
+    <h2>Diagnostic workflow for diesel issues</h2>
+
+    <p><strong>1. Read all DTCs and freeze frames</strong></p>
+    <ul>
+      <li>Diesel systems log multiple related codes</li>
+      <li>Freeze frame shows load, pressure, temp at fault time</li>
+    </ul>
+
+    <p><strong>2. Check fuel system pressure live data</strong></p>
+    <ul>
+      <li>Highest ROI diagnostic—rules out fuel delivery as root cause fast</li>
+    </ul>
+
+    <p><strong>3. Monitor emissions system parameters</strong></p>
+    <ul>
+      <li>DPF load, SCR NOx reduction, EGR temps</li>
+      <li>Often reveals system stress before hard faults</li>
+    </ul>
+
+    <p><strong>4. Visual inspection</strong></p>
+    <ul>
+      <li>Blue/white smoke at exhaust (DEF issue or coolant leak)</li>
+      <li>Black smoke (over-fueling, advanced timing)</li>
+      <li>Leaks at fuel rails, coolers, DEF injector</li>
+    </ul>
+
+    <p><strong>5. Customer consultation</strong></p>
+    <ul>
+      <li>Recent driving patterns (city vs highway matters for DPF)</li>
+      <li>Maintenance history (DEF top-offs, fuel quality)</li>
+      <li>Modifications (aftermarket ECU tunes affect emissions system logic)</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>🔧 Warning:</strong> Some shops and owners delete DPF/SCR systems to avoid regen cycles and improve fuel economy. This is illegal for on-road vehicles. Don't participate. Discuss proper system maintenance instead.
+    </div>
+
+    <h2>Special tooling for diesel diagnostics</h2>
+    <ul>
+      <li><strong>Fuel pressure gauge:</strong> Accurate 0–50,000 PSI (critical for common rail diagnosis)</li>
+      <li><strong>Scope:</strong> To view injector pulses and pressure sensor waveforms</li>
+      <li><strong>Diesel-capable scanner:</strong> Must support fuel rail pressure, DPF status, SCR parameters</li>
+      <li><strong>Compression tester:</strong> Diesel compression targets are 300+ PSI (vs. 150–180 for gasoline)</li>
+    </ul>
+
+    <p>Invest in these if you're taking on diesel diagnostics seriously. ROI is quick given the higher labor rates diesel work commands.</p>
+
+    <div class="cta">
+      <a class="btn primary" href="/products.html">Diesel diagnostic tools →</a>
+      <a class="btn secondary" href="/support.html">Diesel training resources</a>
+    </div>
+  </article>
+</div>
+</body>
+</html>

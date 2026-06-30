@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oscilloscope techniques for automotive diagnostics: Signals you must understand | ProAutoTek</title>
+  <meta name="description" content="Master automotive oscilloscope use. Learn to interpret waveforms, measure sensor signals, and diagnose electrical faults with confidence.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    :root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;--accent:#58a6ff;--accent2:#3fb950}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    .wrap{max-width:800px;margin:0 auto;padding:20px}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);margin-bottom:24px}
+    .logo{font-weight:700;font-size:18px;color:var(--accent)}
+    .back{color:var(--muted);text-decoration:none;font-size:14px}
+    .back:hover{color:var(--accent)}
+    article{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+    h1{margin:0 0 8px;font-size:28px;color:#fff}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:20px}
+    p{margin:0 0 16px}
+    h2{color:#fff;font-size:20px;margin:24px 0 12px;padding-top:16px;border-top:1px solid var(--border)}
+    ul{margin:0 0 16px;padding-left:20px}
+    li{margin-bottom:8px}
+    code{background:#21262d;padding:2px 6px;border-radius:4px;font-size:14px}
+    .highlight{background:linear-gradient(135deg,rgba(88,166,255,0.1),rgba(63,185,80,0.1));border:1px solid var(--border);border-radius:8px;padding:16px;margin:16px 0}
+    .cta{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+    .btn{padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;font-size:14px}
+    .btn.primary{background:var(--accent);color:#0d1117}
+    .btn.secondary{background:var(--card);color:var(--text);border:1px solid var(--border)}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav">
+    <a class="logo" href="/">🔧 ProAutoTek</a>
+    <a class="back" href="/blog.html">← Back to Blog</a>
+  </nav>
+  
+  <article>
+    <h1>Oscilloscope techniques for automotive diagnostics</h1>
+    <p class="meta">June 26, 2026 · 10 min read · Electrical Systems</p>
+
+    <p>An oscilloscope (or "scope") is one of the most powerful diagnostic tools available—but only if you know how to read it. While your scan tool tells you what the PCM thinks is happening, a scope shows you the actual electrical reality. This article teaches you the signals every technician should know how to interpret.</p>
+
+    <h2>Analog vs digital scopes: What you need</h2>
+
+    <div class="highlight">
+      <strong>Recommendation:</strong> For automotive diagnostics, use a digital/storage scope. Modern handheld units like Snap-on Solus or Launch like tools have built-in scopes that capture and display waveforms clearly. Analog scopes are largely obsolete for this work.
+    </div>
+
+    <p><strong>Key features to look for:</strong></p>
+    <ul>
+      <li>At least 2 channels (preferably 4) to compare signals</li>
+      <li>History/storage mode (captures transient faults)</li>
+      <li>Automotive-specific templates (trigger patterns for ignition, injection, etc.)</li>
+      <li>Good battery life for in-vehicle work</li>
+    </ul>
+
+    <h2>Critical waveforms every technician must know</h2>
+
+    <h2>1. Ignition Coil Primary Waveform</h2>
+    <p>The most fundamental scope test for engine diagnostics.</p>
+    <ul>
+      <li><strong>What to expect:</strong> Clean square wave switching on/off, typically 0-12V</li>
+      <li><strong>On time:</strong> Dwell angle (3–5 ms for most modern engines)</li>
+      <li><strong>Off time:</strong> Collapse spike reaching -200V to -400V (coil kickback)</li>
+      <li><strong>Bad sign:</strong> Sloped off-time, irregular dwell, no collapse spike</li>
+    </ul>
+
+    <p><strong>What you're diagnosing:</strong> Igniter module, coil driver circuit, spark plug condition</p>
+
+    <p><strong>Interpretation:</strong></p>
+    <ul>
+      <li><strong>Clean waveform, rough idle:</strong> Look elsewhere—ignition is fine</li>
+      <li><strong>Soft spikes, no sharp collapse:</strong> Igniter failing or weak coil resistance</li>
+      <li><strong>Dwell varies with RPM:</strong> Normal for older vehicles, suspect igniter on newer ones</li>
+    </ul>
+
+    <h2>2. Fuel Injector Waveform</h2>
+    <ul>
+      <li><strong>What to expect:</strong> Clean voltage pulse, typically 4–6V drive signal or 0-12V full command</li>
+      <li><strong>Rise time:</strong> Should be fast (<1 ms), clean edges</li>
+      <li><strong>Duration:</strong> 2–15 ms depending on load (longer = more fuel)</li>
+      <li><strong>Bad sign:</strong> Ragged edges, ringing, or incomplete signal</li>
+    </ul>
+
+    <p><strong>Diagnosis tips:</strong></p>
+    <ul>
+      <li><strong>Misfire on one cylinder:</strong> Check injector voltage on that cylinder vs others</li>
+      <li><strong>All cylinders weak:</strong> Likely fuel pressure or fuel delivery issue, not electrical</li>
+      <li><strong>Ringing after pulse:</strong> Can indicate injector internal resistance breaking down</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>💡 Pro technique:</strong> Use 2-channel mode: capture fuel injector command on channel 1 and cylinder pressure (via knock sensor or fuel pressure transducer) on channel 2. This shows fuel command response in real-time.
+    </div>
+
+    <h2>3. Mass Air Flow (MAF) Sensor Output</h2>
+    <ul>
+      <li><strong>Signal type:</strong> Frequency or voltage (depends on sensor design)</li>
+      <li><strong>Frequency type (typical):</strong> 5–7 kHz at idle, scales with airflow</li>
+      <li><strong>Voltage type:</strong> 0–5V ramp, smoothly increases with throttle opening</li>
+      <li><strong>Bad sign:</strong> Jumpy signal, dropouts, or slow response to throttle</li>
+    </ul>
+
+    <p><strong>What to look for:</strong></p>
+    <ul>
+      <li>Compared to throttle position (should rise together)</li>
+      <li>Smooth, lag-free response (no delay)</li>
+      <li>Consistent operation across multiple start/stop cycles</li>
+    </ul>
+
+    <h2>4. Oxygen Sensor (O2) Waveform</h2>
+    <p>The classic waveform that shows fuel trim health.</p>
+    <ul>
+      <li><strong>What to expect:</strong> Sawtooth or oscillating wave between 0.1V and 0.9V</li>
+      <li><strong>Switch rate:</strong> Typically 1–10 times per second at steady state</li>
+      <li><strong>Bad signs:</strong> Stuck high, stuck low, or very slow switching</li>
+    </ul>
+
+    <p><strong>Interpretation:</strong></p>
+    <ul>
+      <li><strong>Fast switching:</strong> Fuel trim hunting. PCM can't settle on a stable mixture (vacuum leak, MAF issue)</li>
+      <li><strong>Slow switching:</strong> Sensor aging or slow response. Test with thermal shock (cold start vs loaded driving)</li>
+      <li><strong>Stuck high (0.8V+):</strong> Fuel system too rich (over-fueling) or exhaust leak upstream</li>
+      <li><strong>Stuck low (<0.2V):</strong> Lean condition, fuel starvation, or sensor poisoning</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>🔧 Pro tip:</strong> Capture O2 waveforms during a light cruise (steady load), not idle. Idle waveforms are harder to interpret—steady-state operation shows true sensor response.
+    </div>
+
+    <h2>5. Knock Sensor Signal</h2>
+    <ul>
+      <li><strong>What to expect:</strong> AC signal (ripples around 0V), amplitude increases with load/detonation</li>
+      <li><strong>Frequency range:</strong> Typically 5–15 kHz depending on engine design</li>
+      <li><strong>Normal idle:</strong> Minimal signal, just noise floor</li>
+      <li><strong>Under load:</strong> Signal should rise but remain stable</li>
+    </ul>
+
+    <p><strong>Detonation indicators:</strong></p>
+    <ul>
+      <li>Signal suddenly spikes during acceleration (too much boost, bad fuel, carbon)</li>
+      <li>Persistent high signal at normal load (ignition too advanced)</li>
+      <li>Signal disappears when cranking (sensor failure or open circuit)</li>
+    </ul>
+
+    <h2>6. Throttle Position Sensor (TPS)</h2>
+    <ul>
+      <li><strong>What to expect:</strong> Smooth ramp from 0.5V (closed throttle) to 4.5–5V (WOT)</li>
+      <li><strong>At idle:</strong> Should be stable (±0.1V variance)</li>
+      <li><strong>When opening:</strong> Linear response, no gaps or jumps</li>
+      <li><strong>Bad sign:</strong> Stair-stepping, flat sections, or spikes</li>
+    </ul>
+
+    <p><strong>Diagnosis:</strong></p>
+    <ul>
+      <li><strong>Stair-step pattern:</strong> Worn potentiometer inside sensor (replace)</li>
+      <li><strong>Dead zone at closure:</strong> TPS calibration or mechanical issue</li>
+      <li><strong>Slow response to throttle:</strong> Electrical resistance or intermittent connection</li>
+    </ul>
+
+    <h2>Scope techniques for common problems</h2>
+
+    <h2>Misfire diagnostics</h2>
+    <ul>
+      <li>Capture ignition primary on cylinders 1, 2, 3, 4 in sequence</li>
+      <li>Compare dwell timing and spike amplitude</li>
+      <li>Cylinder with weak/late spike likely the problem</li>
+      <li>Combine with fuel injector and compression testing for full picture</li>
+    </ul>
+
+    <h2>Fuel delivery issues</h2>
+    <ul>
+      <li>Measure fuel pressure waveform (use pressure transducer into scope)</li>
+      <li>Check for ripple (should be <10% of baseline pressure)</li>
+      <li>Compare to fuel injector timing and quantity</li>
+      <li>Rough correlation indicates adequate fuel delivery; flat indicates starvation</li>
+    </ul>
+
+    <h2>Electrical noise on the bus</h2>
+    <ul>
+      <li>Capture CAN bus signal (channels 1 &amp; 2 = CAN High &amp; Low)</li>
+      <li>Check for clean, symmetrical waveform</li>
+      <li>Excessive noise suggests EMI, bad connector, or corroded pins</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>Safety note:</strong> When probing around an engine bay, be aware of moving fan belts, hot surfaces, and 12V circuits. Always secure your probe leads safely and never leave the scope unattended near the engine while running.
+    </div>
+
+    <h2>Scope equipment investment</h2>
+    <ul>
+      <li><strong>Entry-level portable scope:</strong> $500–$2,000 (good for basic signals)</li>
+      <li><strong>Professional handheld with templates:</strong> $2,000–$5,000 (Snap-on, Launch, XTOOL level)</li>
+      <li><strong>Bench/stationary scope:</strong> $3,000–$10,000 (for shop with high diagnostic volume)</li>
+    </ul>
+
+    <p>If you're just starting, a mid-range scope with automotive templates will pay for itself quickly in hard-to-diagnose misfire and electrical faults.</p>
+
+    <div class="cta">
+      <a class="btn primary" href="/products.html">Shop oscilloscopes →</a>
+      <a class="btn secondary" href="/support.html">Get scope training</a>
+    </div>
+  </article>
+</div>
+</body>
+</html>

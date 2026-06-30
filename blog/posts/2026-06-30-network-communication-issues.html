@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAN bus network communication issues: Diagnosis and repair | ProAutoTek</title>
+  <meta name="description" content="Troubleshoot CAN bus, LIN, and automotive network faults. Learn communication waveforms, DLC testing, module lockout recovery, and network diagnostics.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    :root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;--accent:#58a6ff;--accent2:#3fb950}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    .wrap{max-width:800px;margin:0 auto;padding:20px}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);margin-bottom:24px}
+    .logo{font-weight:700;font-size:18px;color:var(--accent)}
+    .back{color:var(--muted);text-decoration:none;font-size:14px}
+    .back:hover{color:var(--accent)}
+    article{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+    h1{margin:0 0 8px;font-size:28px;color:#fff}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:20px}
+    p{margin:0 0 16px}
+    h2{color:#fff;font-size:20px;margin:24px 0 12px;padding-top:16px;border-top:1px solid var(--border)}
+    ul{margin:0 0 16px;padding-left:20px}
+    li{margin-bottom:8px}
+    code{background:#21262d;padding:2px 6px;border-radius:4px;font-size:14px}
+    .highlight{background:linear-gradient(135deg,rgba(88,166,255,0.1),rgba(63,185,80,0.1));border:1px solid var(--border);border-radius:8px;padding:16px;margin:16px 0}
+    .cta{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+    .btn{padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;font-size:14px}
+    .btn.primary{background:var(--accent);color:#0d1117}
+    .btn.secondary{background:var(--card);color:var(--text);border:1px solid var(--border)}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav">
+    <a class="logo" href="/">🔧 ProAutoTek</a>
+    <a class="back" href="/blog.html">← Back to Blog</a>
+  </nav>
+  
+  <article>
+    <h1>Network communication issues</h1>
+    <p class="meta">June 30, 2026 · 9 min read · CAN/LIN Systems</p>
+
+    <p>Modern vehicles are networks. Multiple ECUs (engine, transmission, body, gateway) communicate constantly over CAN (Controller Area Network) and LIN (Local Interconnect Network) buses. When communication fails, you get cascade faults: the dash goes dark, the transmission won't shift, or nothing responds to diagnostics. These are some of the hardest faults to diagnose, but the methodology is systematic and trackable.</p>
+
+    <h2>CAN bus architecture: Understanding the network</h2>
+
+    <h2>CAN overview</h2>
+    <ul>
+      <li><strong>Purpose:</strong> Connects all vehicle modules and allows them to share data</li>
+      <li><strong>Speed:</strong> Typically 250 kbps or 500 kbps</li>
+      <li><strong>Physical:</strong> Two wires (CAN High = Pin 6, CAN Low = Pin 14 on OBD2 connector)</li>
+      <li><strong>Protocol:</strong> Differential signaling—CAN High and CAN Low voltage difference carries the signal</li>
+    </ul>
+
+    <p><strong>How it works:</strong></p>
+    <ul>
+      <li>All modules listen to the same wires simultaneously (shared bus)</li>
+      <li>When module A wants to send data, it transmits; all others receive</li>
+      <li>Collision detection: If two modules transmit simultaneously, lower-priority message yields</li>
+      <li>No central controller; all modules communicate peer-to-peer</li>
+    </ul>
+
+    <h2>LIN buses</h2>
+    <ul>
+      <li><strong>Purpose:</strong> Lower-speed, simpler communications (climate, lighting, seats)</li>
+      <li><strong>Speed:</strong> 10 kbps typical (much slower than CAN)</li>
+      <li><strong>Physical:</strong> Single wire (shared ground)</li>
+      <li><strong>Master/slave:</strong> One module (e.g., Body Control Module) controls LIN slaves</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>💡 Key difference:</strong> CAN is peer-to-peer; LIN is master-controlled. A failed LIN master affects all LIN slaves. A failed CAN node might only affect its own functionalities.
+    </div>
+
+    <h2>Common network communication faults</h2>
+
+    <h2>Complete CAN bus down ("no communication with vehicle")</h2>
+    <p>Your scan tool can't reach any modules.</p>
+    <ul>
+      <li><strong>Likely causes:</strong> Open or shorted CAN wires, gateway module failure, battery disconnect, OBD2 connector issue</li>
+      <li><strong>First check:</strong> Test OBD2 connector pins 4 (ground) and 16 (power) for voltage</li>
+      <li><strong>Next:</strong> Disconnect DLC breakout box; measure CAN High/Low at OBD2 pins 6 and 14</li>
+    </ul>
+
+    <h2>Partial communication (some modules respond, others don't)</h2>
+    <ul>
+      <li><strong>Likely causes:</strong> Failed individual module, specific CAN branch disconnected, gateway module not forwarding data</li>
+      <li><strong>Diagnosis:</strong> Scan for modules that respond (engine, body, etc. that DO communicate)</li>
+      <li><strong>Isolate:</strong> Offending module likely failed or disconnected from network</li>
+    </ul>
+
+    <h2>Module lockout / gateway refused communication</h2>
+    <ul>
+      <li><strong>Symptom:</strong> Scanner connects but modules report "not responding" or "service required"</li>
+      <li><strong>Cause:</strong> Security lockout after too many failed access attempts or factory reset</li>
+      <li><strong>Solution:</strong> Gateway module reset (typically 30+ minutes with specific procedures per OEM)</li>
+    </ul>
+
+    <h2>CAN bus diagnostic workflow</h2>
+
+    <p><strong>Step 1: Verify vehicle power</strong></p>
+    <ul>
+      <li>Battery voltage 12.5V minimum</li>
+      <li>OBD2 power pin (16) shows ~12V</li>
+      <li>OBD2 ground pin (4) shows <0.5 ohm to battery negative</li>
+    </ul>
+
+    <p><strong>Step 2: Probe the OBD2 connector</strong></p>
+    <ul>
+      <li>Use multimeter to measure voltage on pins 6 (CAN High) and 14 (CAN Low)</li>
+      <li>Should show ~2.5V each at rest (5V total between them)</li>
+      <li>During bus activity, they oscillate but stay between 0–5V</li>
+    </ul>
+
+    <p><strong>Normal CAN voltage behavior:</strong></p>
+    <ul>
+      <li><strong>At rest:</strong> CAN High ≈ 2.5V, CAN Low ≈ 2.5V (balanced)</li>
+      <li><strong>During messaging:</strong> CAN High rises to ~4V, CAN Low drops to ~1V (differential signal)</li>
+      <li><strong>No activity:</strong> Both wires stuck at 0V or 5V = short circuit</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>🔧 Pro tip:</strong> Use an oscilloscope on CAN bus pins to see actual waveforms. A clean, regular square wave pattern indicates healthy bus activity. Garbled or flat signals indicate corruption or electrical issue.
+    </div>
+
+    <p><strong>Step 3: Locate the DLC and check connectors</strong></p>
+    <ul>
+      <li>CAN wires typically run from OBD2 DLC to gateway module (usually near firewall or under dash)</li>
+      <li>Visually inspect for corroded, loose, or water-damaged connectors</li>
+      <li>Check for chafed wires (owner may have added aftermarket equipment)</li>
+    </ul>
+
+    <p><strong>Step 4: Isolate CAN branches</strong></p>
+    <ul>
+      <li>On vehicles with multiple CAN networks (body, powertrain, infotainment), determine which is down</li>
+      <li>Use scanner to identify which modules are responding vs. silent</li>
+      <li>Silent modules suggest that CAN branch is disconnected</li>
+    </ul>
+
+    <p><strong>Step 5: Test with mulit-meter across CAN pins</strong></p>
+    <ul>
+      <li><strong>Measure resistance between CAN High and CAN Low at OBD2 DLC (key off):</strong></li>
+      <li>Should read 60 ohms (two 120-ohm terminators in parallel)</li>
+      <li>If <10 ohms or >100 ohms, indicates short circuit or open circuit</li>
+    </ul>
+
+    <p><strong>Step 6: Disconnect suspect modules one at a time</strong></p>
+    <ul>
+      <li>If bus was shorted between a module connector, unplugging it should restore communication</li>
+      <li>Replacement module usually fixes the issue</li>
+    </ul>
+
+    <h2>Common communication-related DTCs</h2>
+
+    <h2>U0100 – Lost Communication with ECU/PCM</h2>
+    <ul>
+      <li><strong>Cause:</strong> ECU offline, CAN wire broken, gateway issue</li>
+      <li><strong>Test:</strong> Can you read other modules? If yes, ECU-specific issue. If no, whole bus is down.</li>
+    </ul>
+
+    <h2>U0101 – Lost Communication with Transmission Control Module</h2>
+    <ul>
+      <li><strong>Same as above</strong> but for transmission module</li>
+      <li><strong>Often paired with:</strong> P0700 (transmission problem) or transmission limp mode</li>
+    </ul>
+
+    <h2>U0120 – Lost Communication with Body Control Module</h2>
+    <ul>
+      <li>Affects lighting, door locks, climate, seat controls</li>
+      <li>May show as "all dash lights out" or "won't lock/unlock"</li>
+    </ul>
+
+    <h2>U1000 – CAN Bus Fault</h2>
+    <ul>
+      <li><strong>Generic CAN problem:</strong> Could be any network issue</li>
+      <li><strong>Investigation:</strong> Pull freeze frames; what was happening when fault occurred?</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>💡 Hint:</strong> U-codes (U0xxx) are always communication faults. P-codes indicate the module itself is malfunctioning. If you see U-codes alongside P-codes, the module may be failing AND the bus may be struggling.
+    </div>
+
+    <h2>Repair strategies</h2>
+
+    <h2>CAN wire damage (chafed, broken intern insulation)</h2>
+    <ul>
+      <li><strong>Solution:</strong> Repair or replace wiring; re-crimp connectors</li>
+      <li><strong>Prevention:</strong> Verify aftermarket equipment (alarm systems, etc.) aren't chafing factory harness</li>
+    </ul>
+
+    <h2>Corroded OBD2 connector or DLC pins</h2>
+    <ul>
+      <li><strong>Solution:</strong> Clean with electronics cleaner, or replace DLC connector assembly</li>
+      <li><strong>Cost:</strong> Usually <$100 in parts; real cost is diagnosis</li>
+    </ul>
+
+    <h2>Failed gateway module</h2>
+    <ul>
+      <li><strong>Common on vehicles after collision:</strong> Gateway unit may have been struck or suffered electrical surge</li>
+      <li><strong>Solution:</strong> Replace and reprogram with VIN/configuration data</li>
+      <li><strong>Cost:</strong> $800–$2,000+ (module, programming, diagnostics)</li>
+    </ul>
+
+    <h2>Module offline due to power or ground fault</h2>
+    <ul>
+      <li><strong>Test:</strong> Measure power and ground at module connectors</li>
+      <li><strong>Solution:</strong> Repair power/ground circuits; may involve BCM relay or fuse</li>
+    </ul>
+
+    <h2>Equipment investment for CAN diagnostics</h2>
+    <ul>
+      <li><strong>Oscilloscope:</strong> Most valuable tool ($2,000–$5,000 handheld scope with async trigger)</li>
+      <li><strong>DLC breakout box:</strong> Allows monitoring individual pins without damage ($100–$300)</li>
+      <li><strong>CAN bus analyzer:</strong> Specialized (overkill for most shops unless high-volume diagnostics)</li>
+    </ul>
+
+    <div class="cta">
+      <a class="btn primary" href="/products.html">Network diagnostics tools →</a>
+      <a class="btn secondary" href="/support.html">Advanced troubleshooting support</a>
+    </div>
+  </article>
+</div>
+</body>
+</html>

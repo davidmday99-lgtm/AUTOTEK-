@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Common DTC trouble codes explained: P0100-P0600 breakdown | ProAutoTek</title>
+  <meta name="description" content="Understand the most common OBD2 trouble codes. Learn what each DTC means, common causes, and how to diagnose them effectively.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    :root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;--accent:#58a6ff;--accent2:#3fb950}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    .wrap{max-width:800px;margin:0 auto;padding:20px}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);margin-bottom:24px}
+    .logo{font-weight:700;font-size:18px;color:var(--accent)}
+    .back{color:var(--muted);text-decoration:none;font-size:14px}
+    .back:hover{color:var(--accent)}
+    article{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+    h1{margin:0 0 8px;font-size:28px;color:#fff}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:20px}
+    p{margin:0 0 16px}
+    h2{color:#fff;font-size:20px;margin:24px 0 12px;padding-top:16px;border-top:1px solid var(--border)}
+    ul{margin:0 0 16px;padding-left:20px}
+    li{margin-bottom:8px}
+    code{background:#21262d;padding:2px 6px;border-radius:4px;font-size:14px}
+    .highlight{background:linear-gradient(135deg,rgba(88,166,255,0.1),rgba(63,185,80,0.1));border:1px solid var(--border);border-radius:8px;padding:16px;margin:16px 0}
+    .cta{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+    .btn{padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;font-size:14px}
+    .btn.primary{background:var(--accent);color:#0d1117}
+    .btn.secondary{background:var(--card);color:var(--text);border:1px solid var(--border)}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav">
+    <a class="logo" href="/">🔧 ProAutoTek</a>
+    <a class="back" href="/blog.html">← Back to Blog</a>
+  </nav>
+  
+  <article>
+    <h1>Common DTC trouble codes explained</h1>
+    <p class="meta">June 23, 2026 · 8 min read · Diagnostics</p>
+
+    <p>DTC codes can seem like alphabet soup at first, but they follow a logical pattern. Understanding the structure and learning the most common codes will significantly speed up your diagnostic work and help you explain issues to customers clearly.</p>
+
+    <h2>DTC structure: What the letters and numbers mean</h2>
+    <p>Every trouble code follows the format: P/B/C/U followed by four digits.</p>
+    <ul>
+      <li><strong>P</strong> = Powertrain (engine, transmission, hybrid systems)</li>
+      <li><strong>B</strong> = Body (doors, windows, lighting, seats)</li>
+      <li><strong>C</strong> = Chassis (steering, suspension, ABS, braking)</li>
+      <li><strong>U</strong> = Undefined/Network (communication, CAN bus faults)</li>
+    </ul>
+
+    <p>The first digit after the letter indicates severity: 0 = OBD standard, 1 = Manufacturer specific.</p>
+
+    <div class="highlight">
+      <strong>💡 Example:</strong> P0420 (Catalyst System Efficiency Below Threshold) starts with P0, so it's a standardized powertrain code. P1234 would be manufacturer-specific.
+    </div>
+
+    <h2>Top 10 powertrain codes you'll see constantly</h2>
+
+    <h2>P0300 – Random/Multiple Cylinder Misfire</h2>
+    <ul>
+      <li><strong>Common causes:</strong> Spark plugs, ignition coils, fuel injector, compression issue</li>
+      <li><strong>Diagnosis approach:</strong> Check fuel trims, monitor misfire counters, perform compression test</li>
+      <li><strong>Quick fix check:</strong> Visual inspection of plugs and coil packs first</li>
+    </ul>
+
+    <h2>P0171/P0174 – System Too Lean (Bank 1/2)</h2>
+    <ul>
+      <li><strong>What it means:</strong> Engine is running with too much air, not enough fuel</li>
+      <li><strong>Common culprits:</strong> Vacuum leak, failing MAF sensor, weak fuel pressure</li>
+      <li><strong>Check:</strong> Fuel pressure graph, vacuum hoses, MAF sensor cleanliness</li>
+    </ul>
+
+    <h2>P0420 – Catalyst System Efficiency Below Threshold</h2>
+    <p>The famous "check engine light" that keeps coming back.</p>
+    <ul>
+      <li><strong>Usually means:</strong> Catalytic converter efficiency drop OR an underlying issue (above codes unresolved)</li>
+      <li><strong>Key insight:</strong> Fix the real problem first—misfire, lean condition, etc. The cat code is often a symptom</li>
+      <li><strong>Don't just replace the cat:</strong> That'll cost you credibility and money</li>
+    </ul>
+
+    <h2>P0128 – Coolant Temperature Not Reaching Thermostat Regulating Temperature</h2>
+    <ul>
+      <li><strong>Common causes:</strong> Stuck-open thermostat, failed coolant temperature sensor, weak radiator fan</li>
+      <li><strong>Quick check:</strong> Monitor live coolant temps during warm-up—should reach setpoint</li>
+    </ul>
+
+    <h2>P0401 – EGR Flow Insufficient</h2>
+    <ul>
+      <li><strong>Common in:</strong> Older vehicles, high-mileage engines</li>
+      <li><strong>Causes:</strong> Carbon buildup, EGR valve stuck, exhaust restriction</li>
+      <li><strong>Diagnosis:</strong> Check EGR duty cycle during live data, vacuum test</li>
+    </ul>
+
+    <h2>P0133 – Oxygen Sensor Circuit Slow Response</h2>
+    <ul>
+      <li><strong>What it means:</strong> Oxygen sensor isn't switching fast enough—might not be bad yet</li>
+      <li><strong>Common causes:</strong> Aging sensor, fuel trim issues, spark plug condition</li>
+      <li><strong>Don't rush:</strong> Check fuel trims and long-term fuel trim first</li>
+    </ul>
+
+    <h2>P0505 – Idle Control System Malfunction</h2>
+    <ul>
+      <li><strong>Causes:</strong> Vacuum leak, carbon buildup in idle air control, MAF sensor issue</li>
+      <li><strong>Diagnosis:</strong> Record live idle speed data, check for vacuum leaks with smoke test</li>
+    </ul>
+
+    <h2>P0706 – Transmission Range Sensor Circuit</h2>
+    <ul>
+      <li><strong>Transmission issue:</strong> Vehicle may not shift properly or start in gear</li>
+      <li><strong>Check:</strong> Park switch continuity, manual linkage adjustment</li>
+    </ul>
+
+    <h2>P0430 – Catalyst System Efficiency Below Threshold (Bank 2)</h2>
+    <p>Same as P0420 but on the opposite cylinder bank. Same advice applies.</p>
+
+    <h2>P0440 – Evaporative Emission Control System Malfunction</h2>
+    <ul>
+      <li><strong>Common in:</strong> Vehicles with faulty fuel caps or charcoal canister issues</li>
+      <li><strong>Often:</strong> A loose gas cap—tell the customer to tighten it and clear the code</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>🔧 Pro tip:</strong> Always pull freeze frame data with the code. It tells you engine load, fuel trims, and other parameters when the fault occurred—invaluable for diagnosis.
+    </div>
+
+    <h2>The golden rule: Don't code-chase</h2>
+    <p>Reading a code is the starting point, not the diagnosis. Use the code as a clue, then investigate:</p>
+    <ul>
+      <li>Check live data to understand what's really happening</li>
+      <li>Review the freeze frame—when did the fault occur?</li>
+      <li>Perform targeted tests based on the system, not just the code</li>
+      <li>Some codes are symptoms (P0420) of other issues; fix the root cause</li>
+    </ul>
+
+    <div class="cta">
+      <a class="btn primary" href="/products.html">Shop diagnostic tools →</a>
+      <a class="btn secondary" href="/support.html">Ask our tech support</a>
+    </div>
+  </article>
+</div>
+</body>
+</html>
