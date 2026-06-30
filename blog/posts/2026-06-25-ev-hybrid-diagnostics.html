@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EV and hybrid diagnostics: What technicians need to know | ProAutoTek</title>
+  <meta name="description" content="Essential guide to EV and hybrid vehicle diagnostics, including battery diagnostics, HV systems, and regenerative braking troubleshooting.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    :root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;--accent:#58a6ff;--accent2:#3fb950}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    .wrap{max-width:800px;margin:0 auto;padding:20px}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);margin-bottom:24px}
+    .logo{font-weight:700;font-size:18px;color:var(--accent)}
+    .back{color:var(--muted);text-decoration:none;font-size:14px}
+    .back:hover{color:var(--accent)}
+    article{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+    h1{margin:0 0 8px;font-size:28px;color:#fff}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:20px}
+    p{margin:0 0 16px}
+    h2{color:#fff;font-size:20px;margin:24px 0 12px;padding-top:16px;border-top:1px solid var(--border)}
+    ul{margin:0 0 16px;padding-left:20px}
+    li{margin-bottom:8px}
+    code{background:#21262d;padding:2px 6px;border-radius:4px;font-size:14px}
+    .highlight{background:linear-gradient(135deg,rgba(88,166,255,0.1),rgba(63,185,80,0.1));border:1px solid var(--border);border-radius:8px;padding:16px;margin:16px 0}
+    .cta{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+    .btn{padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;font-size:14px}
+    .btn.primary{background:var(--accent);color:#0d1117}
+    .btn.secondary{background:var(--card);color:var(--text);border:1px solid var(--border)}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav">
+    <a class="logo" href="/">🔧 ProAutoTek</a>
+    <a class="back" href="/blog.html">← Back to Blog</a>
+  </nav>
+  
+  <article>
+    <h1>EV and hybrid diagnostics: What technicians need to know</h1>
+    <p class="meta">June 25, 2026 · 8 min read · EV Diagnostics</p>
+
+    <p>Electric and hybrid vehicles represent one of the fastest-growing segments in shop diagnostics. While they share many conventional systems with gas vehicles, EVs introduce entirely new components and failure modes. Understanding high-voltage (HV) systems, battery management, and motor controllers is now essential for staying competitive.</p>
+
+    <h2>Key differences from conventional vehicles</h2>
+    <ul>
+      <li><strong>High-voltage traction battery:</strong> 200–600V DC system, requires specialized safety procedures</li>
+      <li><strong>No transmission fluid:</strong> Most EVs use single-speed reduction gearboxes</li>
+      <li><strong>Regenerative braking:</strong> Motor recovers energy during deceleration</li>
+      <li><strong>Thermal management:</strong> Battery cooling and motor cooling are critical</li>
+      <li><strong>Power electronics:</strong> Inverters, converters, and isolated DC/DC converters handle voltage conversion</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>⚠️ Safety first:</strong> High-voltage systems can deliver lethal shocks. Many shops require HV certification before EV work. Never service HV components without proper training and isolation procedures.
+    </div>
+
+    <h2>Common EV/hybrid faults and diagnostics</h2>
+
+    <h2>Reduced battery range or power loss</h2>
+    <p><strong>Causes:</strong> Battery degradation, cell imbalance, BMS (Battery Management System) fault, thermal issues</p>
+    <ul>
+      <li><strong>Check:</strong> Battery state of health (SOH) and state of charge (SOC) via OEM scan tool</li>
+      <li><strong>Temperature:</strong> Battery packs perform poorly when cold; thermal conditioning is crucial</li>
+      <li><strong>Cell voltage:</strong> Imbalanced cells (>50mV difference) may trigger limp mode</li>
+    </ul>
+
+    <h2>Charge port not responding</h2>
+    <p><strong>Causes:</strong> Charge port relay failure, wiring fault, BMS communication issue, authentication failure</p>
+    <ul>
+      <li><strong>Start:</strong> Check 12V accessory power (many issues stem from low 12V battery)</li>
+      <li><strong>Scan:</strong> Check for CAN communication faults between charger and BMS</li>
+      <li><strong>Physical:</strong> Inspect connector for corrosion or water intrusion</li>
+    </ul>
+
+    <h2>Regenerative braking not working</h2>
+    <p><strong>Causes:</strong> Motor controller fault, inverter issue, brake sensor malfunction, BMS limiting regen</p>
+    <ul>
+      <li><strong>Diagnosis:</strong> Road test while monitoring motor controller data and brake pressure</li>
+      <li><strong>Common:</strong> Brake pedal position sensor faults prevent regen activation</li>
+      <li><strong>Note:</strong> Some EVs limit regen when battery is fully charged or too warm</li>
+    </ul>
+
+    <h2>Thermal management faults</h2>
+    <p><strong>Causes:</strong> Coolant pump failure, thermostat stuck, blocked thermal lines, sensor fault</p>
+    <ul>
+      <li><strong>Critical:</strong> Overheating battery or motor significantly reduces performance and lifespan</li>
+      <li><strong>Symptom:</strong> Vehicle enters "thermal limp mode" and limits power output</li>
+      <li><strong>Live data:</strong> Monitor battery/motor coolant temperature and pump current draw</li>
+    </ul>
+
+    <h2>Onboard charger faults</h2>
+    <p><strong>Causes:</strong> AC/DC converter failure, isolation fault, thermistor issue, power quality problem</p>
+    <ul>
+      <li><strong>Status:</strong> Many scan tools now show charger diagnostics; check status codes</li>
+      <li><strong>Isolation:</strong> Ground isolation faults prevent charging for safety reasons</li>
+      <li><strong>Note:</strong> Charging at DC fast-chargers uses a different system (CCS/Tesla connector)</li>
+    </ul>
+
+    <h2>Hybrid-specific issues</h2>
+
+    <h2>Engine start/stop malfunction</h2>
+    <p>Hybrid systems automatically shut off the engine at stops to save fuel.</p>
+    <ul>
+      <li><strong>Causes:</strong> Battery voltage too low, thermal conditions outside range, sensor faults</li>
+      <li><strong>Diagnosis:</strong> Check 12V battery state, monitor brake pressure sensor, verify coolant temperature</li>
+    </ul>
+
+    <h2>Power split device issues</h2>
+    <p>CVT or planetary gearset issues reduce efficiency or cause noise.</p>
+    <ul>
+      <li><strong>Symptom:</strong> Strange whining or hesitation during transition between motor and engine</li>
+      <li><strong>Check:</strong> Monitor inverter performance and engine/motor synchronization</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>💡 Hybrid tip:</strong> Hybrids are complex systems. Always pull full diagnostic DTCs—a check engine light might be caused by a failing hybrid control module rather than the engine itself.
+    </div>
+
+    <h2>Diagnostic tools for EV/hybrid work</h2>
+    <p>You'll need more than a standard OBD2 scanner:</p>
+    <ul>
+      <li><strong>OEM scan tools:</strong> Tesla, Ford (Mustang Mach-E), Chevy (Bolt), etc. require manufacturer-specific scan tools</li>
+      <li><strong>Multi-brand platforms:</strong> Some aftermarket tools now support EVs (check current coverage)</li>
+      <li><strong>HV-safe multimeter:</strong> CAT IV rated up to 600V DC for safe measurements</li>
+      <li><strong>Thermal camera:</strong> Identify coolant leaks or hot spots in thermal systems</li>
+      <li><strong>Insulation resistance tester:</strong> Verify isolation in HV circuits</li>
+    </ul>
+
+    <h2>Training and certification</h2>
+    <p>If you're new to EV/hybrid diagnostics:</p>
+    <ul>
+      <li><strong>Online:</strong> Many manufacturers offer free EV training modules</li>
+      <li><strong>Certification:</strong> ASE introduced EVT (EV Technician) credential in 2026</li>
+      <li><strong>Hands-on:</strong> Some vendors offer in-person training with actual vehicles</li>
+      <li><strong>Cost:</strong> Budget $500–$2,000 for proper certification</li>
+    </ul>
+
+    <h2>Business considerations</h2>
+    <ul>
+      <li><strong>Safety liability:</strong> HV work requires proper training and insurance coverage</li>
+      <li><strong>Equipment investment:</strong> Charging simulation tools and HV scan capabilities ($3,000–$10,000)</li>
+      <li><strong>Competitive advantage:</strong> As EV sales grow, shops with EV expertise will have more work than they can handle</li>
+    </ul>
+
+    <div class="cta">
+      <a class="btn primary" href="/products.html">EV diagnostic tools →</a>
+      <a class="btn secondary" href="/support.html">Find EV training near you</a>
+    </div>
+  </article>
+</div>
+</body>
+</html>

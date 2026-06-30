@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Common diagnostic trouble codes (DTCs) explained | ProAutoTek</title>
+  <meta name="description" content="Understand the most common OBD2 trouble codes, what causes them, and how to diagnose them effectively.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    :root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;--accent:#58a6ff;--accent2:#3fb950}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    .wrap{max-width:800px;margin:0 auto;padding:20px}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);margin-bottom:24px}
+    .logo{font-weight:700;font-size:18px;color:var(--accent)}
+    .back{color:var(--muted);text-decoration:none;font-size:14px}
+    .back:hover{color:var(--accent)}
+    article{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+    h1{margin:0 0 8px;font-size:28px;color:#fff}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:20px}
+    p{margin:0 0 16px}
+    h2{color:#fff;font-size:20px;margin:24px 0 12px;padding-top:16px;border-top:1px solid var(--border)}
+    ul{margin:0 0 16px;padding-left:20px}
+    li{margin-bottom:8px}
+    code{background:#21262d;padding:2px 6px;border-radius:4px;font-size:14px}
+    .highlight{background:linear-gradient(135deg,rgba(88,166,255,0.1),rgba(63,185,80,0.1));border:1px solid var(--border);border-radius:8px;padding:16px;margin:16px 0}
+    .cta{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+    .btn{padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;font-size:14px}
+    .btn.primary{background:var(--accent);color:#0d1117}
+    .btn.secondary{background:var(--card);color:var(--text);border:1px solid var(--border)}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav">
+    <a class="logo" href="/">🔧 ProAutoTek</a>
+    <a class="back" href="/blog.html">← Back to Blog</a>
+  </nav>
+  
+  <article>
+    <h1>Common diagnostic trouble codes (DTCs) explained</h1>
+    <p class="meta">June 23, 2026 · 7 min read · Diagnostics</p>
+
+    <p>Diagnostic Trouble Codes (DTCs) are the language your vehicle's computer uses to tell you something is wrong. Learning to interpret the most common codes will make you a faster, more confident diagnostician.</p>
+
+    <h2>Understanding DTC structure</h2>
+    <p>Every OBD2 code follows a 5-character format: <code>PXXXX</code>, where the first letter indicates the system:</p>
+    <ul>
+      <li><strong>P:</strong> Powertrain (engine, transmission, emissions)</li>
+      <li><strong>B:</strong> Body (lights, doors, climate control)</li>
+      <li><strong>C:</strong> Chassis (ABS, steering, suspension)</li>
+      <li><strong>U:</strong> Undefined/Network (communication faults)</li>
+    </ul>
+
+    <h2>Top 10 codes you'll see regularly</h2>
+
+    <h2>P0101 – Mass or Volume Air Flow (MAF) Sensor Range/Performance</h2>
+    <p><strong>Causes:</strong> Dirty MAF sensor (most common), intake leak, vacuum leak, bad sensor</p>
+    <ul>
+      <li><strong>Quick fix:</strong> Clean MAF with specialized solvent, don't touch the sensor element</li>
+      <li><strong>Diagnosis:</strong> Check live MAF data, compare to known-good baseline</li>
+    </ul>
+
+    <h2>P0300 – Random/Multiple Cylinder Misfire Detected</h2>
+    <p><strong>Causes:</strong> Spark plugs, coil packs, fuel injectors, fuel pressure, compression issues</p>
+    <ul>
+      <li><strong>Key step:</strong> Check for cylinder-specific misfire codes (P0301-P0308) first</li>
+      <li><strong>Live data:</strong> Monitor fuel pressure, spark timing, and injector pulse width</li>
+    </ul>
+
+    <h2>P0401 – EGR Flow Insufficient</h2>
+    <p><strong>Causes:</strong> Clogged EGR valve, bad EGR solenoid, intake carbon buildup</p>
+    <ul>
+      <li><strong>Common fix:</strong> Carbon cleaning or EGR valve replacement</li>
+      <li><strong>Note:</strong> This code is less common on newer vehicles with advanced emission control</li>
+    </ul>
+
+    <h2>P0430 – Catalyst System Efficiency Below Threshold (Bank 2)</h2>
+    <p><strong>Causes:</strong> Failing catalytic converter, oxygen sensor issue, engine running rich/lean</p>
+    <ul>
+      <li><strong>Check first:</strong> Oxygen sensor voltages (upstream vs. downstream)</li>
+      <li><strong>Reality check:</strong> Catalytic converters fail more often on higher-mileage vehicles</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>💡 Tip:</strong> Always address the root cause, not just the code. A P0430 code might be an oxygen sensor, not a converter.
+    </div>
+
+    <h2>P0505 – Idle Air Control System Malfunction</h2>
+    <p><strong>Causes:</strong> Vacuum leak, dirty throttle body, bad idle air control valve, intake leak</p>
+    <ul>
+      <li><strong>diagnosis:</strong> Check idle RPM stability with scope or graphing tool</li>
+      <li><strong>Quick win:</strong> Throttle body cleaning solves this more often than you'd think</li>
+    </ul>
+
+    <h2>P0600-P0699 – Communication faults</h2>
+    <p><strong>Causes:</strong> CAN bus issues, corroded connectors, module failures, wiring problems</p>
+    <ul>
+      <li><strong>Investigation:</strong> Check DLC pins 6 and 14 for CAN bus integrity</li>
+      <li><strong>Scope work:</strong> Monitor CAN traffic during fault trigger</li>
+    </ul>
+
+    <h2>C1201 – ABS fault detected</h2>
+    <p><strong>Causes:</strong> wheel speed sensor failure, ABS pump/motor issue, wiring problems</p>
+    <ul>
+      <li><strong>Start here:</strong> Check all four wheel speed sensors with a scope</li>
+      <li><strong>Signal quality:</strong> Low signal voltage or noise can trigger false faults</li>
+    </ul>
+
+    <h2>P0700 – Transmission Control System Malfunction</h2>
+    <p><strong>Causes:</strong> Transmission fault (get transmission-specific codes), wiring issue</p>
+    <ul>
+      <li><strong>Important:</strong> This is usually a gateway code; the real issue is in the supporting DTCs</li>
+      <li><strong>Read full list:</strong> Always pull all DTCs, not just the first one</li>
+    </ul>
+
+    <h2>U0100 – Lost Communication With ECM/PCM</h2>
+    <p><strong>Causes:</strong> CAN bus down, ECM power issue, wiring or connector fault</p>
+    <ul>
+      <li><strong>Check:</strong> Power and ground to the ECM using a multimeter</li>
+      <li><strong>Next:</strong> Verify CAN lines are responding with a scope</li>
+    </ul>
+
+    <h2>Diagnostic workflow</h2>
+    <p>When you see a code:</p>
+    <ul>
+      <li><strong>1. Understand the code:</strong> What system, what condition triggered it?</li>
+      <li><strong>2. Check for pending DTCs:</strong> Sometimes earlier faults cause secondary codes</li>
+      <li><strong>3. Use live data:</strong> Monitor relevant parameters while recreating the issue</li>
+      <li><strong>4. Verify with waveforms:</strong> A digital multimeter shows voltage; a scope shows the story</li>
+      <li><strong>5. Confirm the fix:</strong> Clear the code, road test, verify it doesn't return</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>🔧 Pro tip:</strong> Keep a reference chart of the top 20 codes in your bay. Faster diagnosis = happier customers = more time for the next job.
+    </div>
+
+    <div class="cta">
+      <a class="btn primary" href="/products.html">Get diagnostic tools →</a>
+      <a class="btn secondary" href="/support.html">Need help diagnosing a code?</a>
+    </div>
+  </article>
+</div>
+</body>
+</html>

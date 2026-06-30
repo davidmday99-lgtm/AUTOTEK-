@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diesel diagnostics: Fuel systems, injectors, and emission controls | ProAutoTek</title>
+  <meta name="description" content="Complete guide to diesel engine diagnostics including fuel injection, DEF systems, and emission control troubleshooting.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    :root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;--accent:#58a6ff;--accent2:#3fb950}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    .wrap{max-width:800px;margin:0 auto;padding:20px}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);margin-bottom:24px}
+    .logo{font-weight:700;font-size:18px;color:var(--accent)}
+    .back{color:var(--muted);text-decoration:none;font-size:14px}
+    .back:hover{color:var(--accent)}
+    article{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+    h1{margin:0 0 8px;font-size:28px;color:#fff}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:20px}
+    p{margin:0 0 16px}
+    h2{color:#fff;font-size:20px;margin:24px 0 12px;padding-top:16px;border-top:1px solid var(--border)}
+    ul{margin:0 0 16px;padding-left:20px}
+    li{margin-bottom:8px}
+    code{background:#21262d;padding:2px 6px;border-radius:4px;font-size:14px}
+    .highlight{background:linear-gradient(135deg,rgba(88,166,255,0.1),rgba(63,185,80,0.1));border:1px solid var(--border);border-radius:8px;padding:16px;margin:16px 0}
+    .cta{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+    .btn{padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;font-size:14px}
+    .btn.primary{background:var(--accent);color:#0d1117}
+    .btn.secondary{background:var(--card);color:var(--text);border:1px solid var(--border)}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav">
+    <a class="logo" href="/">🔧 ProAutoTek</a>
+    <a class="back" href="/blog.html">← Back to Blog</a>
+  </nav>
+  
+  <article>
+    <h1>Diesel diagnostics: Fuel systems, injectors, and emission controls</h1>
+    <p class="meta">June 29, 2026 · 8 min read · Heavy Duty & Diesel</p>
+
+    <p>Diesel engines are everywhere—pickup trucks, commercial vehicles, equipment—and they present unique diagnostic challenges. High fuel pressure, complex emission systems, and manufacturer-specific controls mean diesel diagnostics requires specialized knowledge and tools.</p>
+
+    <h2>Diesel fuel injection systems</h2>
+    <p>There are three main diesel injection architectures you'll encounter:</p>
+
+    <h2>Common Rail Direct Injection (CRDI)</h2>
+    <p>Most modern diesel engines 2000–present use this system.</p>
+    <ul>
+      <li><strong>Fuel pressure:</strong> 20,000–35,000 PSI (extremely high)</li>
+      <li><strong>Components:</strong> High-pressure pump → common rail → solenoid injectors → ECU control</li>
+      <li><strong>Advantage:</strong> Precise timing, low emissions, efficient combustion</li>
+      <li><strong>Diagnostic challenge:</strong> Requires specialized fuel pressure gauges and waveform analysis</li>
+    </ul>
+
+    <h2>Mechanical Unit Injection (MUI / Cummins ISX)</h2>
+    <p>Found in many heavy-duty and older diesel engines.</p>
+    <ul>
+      <li><strong>Fuel pressure:</strong> 3,000–5,000 PSI</li>
+      <li><strong>Design:</strong> Fuel injector is its own pump, driven by engine camshaft</li>
+      <li><strong>Advantage:</strong> Simpler, more robust for heavy duty</li>
+      <li><strong>Limitation:</strong> Older tech, less fuel economy than CRDI</li>
+    </ul>
+
+    <h2>Rotary Distributor Pump (VP44/Bosch)</h2>
+    <p>Common on older Cummins and Ford Powerstrokes (pre-2003).</p>
+    <ul>
+      <li><strong>Fuel pressure:</strong> 5,000–10,000 PSI</li>
+      <li><strong>Design:</strong> Single pump distributors fuel to each injector sequentially</li>
+      <li><strong>Problem:</strong> Prone to wear; difficult to troubleshoot without scope</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>⚠️ Caution:</strong> Never run a diesel engine without adequate fuel supply. Cavitation (air bubbles) damages the pump. Always verify fuel supply pressure before diagnosis.
+    </div>
+
+    <h2>Common diesel fault codes</h2>
+
+    <h2>P0088 – Fuel Rail Pressure Too High</h2>
+    <p><strong>Cause:</strong> Sticking pressure regulator, fuel leak past injector, bad pressure sensor</p>
+    <ul>
+      <li><strong>Check:</strong> Live fuel pressure data while idling (should be 5,000–10,000 PSI idle, 25,000+ PSI load)</li>
+      <li><strong>Test:</strong> Regulator response—pressure should drop smoothly when load decreases</li>
+    </ul>
+
+    <h2>P0087 – Fuel Rail Pressure Too Low</h2>
+    <p><strong>Cause:</strong> Weak fuel pump, clogged filter, leaking injectors, low fuel level</p>
+    <ul>
+      <li><strong>First check:</strong> Fuel tank and filter condition</li>
+      <li><strong>Scope:</strong> Monitor fuel pump current draw during cranking (tells you pump health)</li>
+      <li><strong>Injector leak:</strong> Injectors may bleed-down pressure when engine stops</li>
+    </ul>
+
+    <h2>P0100 – Mass Air Flow Sensor (Diesel variant)</h2>
+    <p><strong>Cause:</strong> Airflow restriction (plugged filter), MAF sensor fouling, intake leak</p>
+    <ul>
+      <li><strong>Diesel note:</strong> Turbo boost depends on clean air; any restriction destroys boost control</li>
+      <li><strong>Fix:</strong> Check intercooler for excessive soot; air filter saturation</li>
+    </ul>
+
+    <h2>P0402 – EGR Flow Excessive</h2>
+    <p><strong>Diesel-specific:</strong> Diesel EGR systems recirculate exhaust for NOx reduction.</p>
+    <ul>
+      <li><strong>Cause:</strong> Stuck EGR valve, carbon buildup in intake manifold</li>
+      <li><strong>Symptom:</strong> Black smoke, rough idle, loss of power</li>
+      <li><strong>Fix:</strong> EGR valve cleaning or replacement, intake manifold cleaning</li>
+    </ul>
+
+    <h2>DEF (Diesel Exhaust Fluid) system faults</h2>
+    <p>Diesel vehicles post-2010 use SCR (Selective Catalytic Reduction) to reduce NOx emissions.</p>
+    <ul>
+      <li><strong>System:</strong> DEF (32.5% urea) sprayed into exhaust; combines with NOx to form harmless nitrogen</li>
+      <li><strong>Common codes:</strong> P0251 (DEF pump), P0245 (DEF dosing), P0107 (DEF tank low)</li>
+      <li><strong>Issue:</strong> DEF freezes in cold climates; tank must be protected</li>
+    </ul>
+
+    <h2>Turbocharger diagnostics for diesel</h2>
+    <p>Turbo failure is common in diesel engines due to high soot and combustion temperatures.</p>
+    <ul>
+      <li><strong>Symptoms:</strong> Lack of boost, excessive smoke, turbo whine/grinding</li>
+      <li><strong>Causes:</strong> Exhaust leak, failed wastegate, worn turbo bearings, intercooler blockage</li>
+      <li><strong>Diagnosis:</strong> Boost gauge (should see 15–25 PSI at load), listening for bearing noise</li>
+      <li><strong>Reality:</strong> Turbo replacement is common (cost: $1,500–$3,000+)</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>💡 Diesel tip:</strong> Always check boost pressure and fuel pressure together. A weak boost can mask other faults, and high fuel pressure won't inject properly without air.
+    </div>
+
+    <h2>Glow plugs and cold-start diagnosis</h2>
+    <p>Diesel engines need preheating (glow plugs) for cold starts, especially below 50°F.</p>
+    <ul>
+      <li><strong>Check:</strong> Glow plug relay operation; listen for the click when ignition turns ON</li>
+      <li><strong>Test:</strong> Disconnect a glow plug and verify 12V–24V during preheat cycle</li>
+      <li><strong>Symptom of failure:</strong> Long crank time in cold weather, white/blue smoke on startup</li>
+    </ul>
+
+    <h2>Fuel quality issues</h2>
+    <p>Diesel fuel is highly susceptible to contamination:</p>
+    <ul>
+      <li><strong>Water in fuel:</strong> Causes injector corrosion, fuel pump wear, microbial growth ("diesel slime")</li>
+      <li><strong>Prevention:</strong> Use fuel with biocide; drain tank annually in humid climates</li>
+      <li><strong>Diagnostic hint:</strong> If multiple fuel system faults appear, suspect water contamination first</li>
+    </ul>
+
+    <h2>Diagnostic tools for diesel work</h2>
+    <ul>
+      <li><strong>Diesel fuel pressure gauge:</strong> Must read 0–50,000 PSI minimum (~$200–$400)</li>
+      <li><strong>Oscilloscope:</strong> Essential for injector pulse analysis and pump current draw</li>
+      <li><strong>OEM scan tool:</strong> Cummins, Duramax, PowerStroke each have proprietary diagnostics</li>
+      <li><strong>Boost pressure gauge:</strong> Tuning/troubleshooting turbo systems</li>
+      <li><strong>Smoke test kit:</strong> Finding intake/exhaust leaks</li>
+    </ul>
+
+    <h2>When to refer to diesel specialists</h2>
+    <ul>
+      <li>Fuel pump failure (high-pressure pumps are expensive, $1,500–$2,500+)</li>
+      <li>Injector failures (often requires manufacturer service procedures)</li>
+      <li>Turbocharger replacement or rebuild</li>
+      <li>Commercial truck work (requires different protocols than pickup trucks)</li>
+      <li>Emission system reprogramming (DEF, EGR)</li>
+    </ul>
+
+    <div class="cta">
+      <a class="btn primary" href="/products.html">Diesel diagnostic tools →</a>
+      <a class="btn secondary" href="/support.html">Diesel training & support</a>
+    </div>
+  </article>
+</div>
+</body>
+</html>

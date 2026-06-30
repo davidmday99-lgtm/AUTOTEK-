@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADAS calibration procedures: Doing it right | ProAutoTek</title>
+  <meta name="description" content="Complete guide to ADAS calibration: camera alignment, radar setup, and performing calibrations correctly after service.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    :root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;--accent:#58a6ff;--accent2:#3fb950}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    .wrap{max-width:800px;margin:0 auto;padding:20px}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);margin-bottom:24px}
+    .logo{font-weight:700;font-size:18px;color:var(--accent)}
+    .back{color:var(--muted);text-decoration:none;font-size:14px}
+    .back:hover{color:var(--accent)}
+    article{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+    h1{margin:0 0 8px;font-size:28px;color:#fff}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:20px}
+    p{margin:0 0 16px}
+    h2{color:#fff;font-size:20px;margin:24px 0 12px;padding-top:16px;border-top:1px solid var(--border)}
+    ul{margin:0 0 16px;padding-left:20px}
+    li{margin-bottom:8px}
+    code{background:#21262d;padding:2px 6px;border-radius:4px;font-size:14px}
+    .highlight{background:linear-gradient(135deg,rgba(88,166,255,0.1),rgba(63,185,80,0.1));border:1px solid var(--border);border-radius:8px;padding:16px;margin:16px 0}
+    .cta{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+    .btn{padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;font-size:14px}
+    .btn.primary{background:var(--accent);color:#0d1117}
+    .btn.secondary{background:var(--card);color:var(--text);border:1px solid var(--border)}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav">
+    <a class="logo" href="/">🔧 ProAutoTek</a>
+    <a class="back" href="/blog.html">← Back to Blog</a>
+  </nav>
+  
+  <article>
+    <h1>ADAS calibration procedures: Doing it right</h1>
+    <p class="meta">June 24, 2026 · 9 min read · Advanced Diagnostics</p>
+
+    <p>Advanced Driver Assistance Systems (ADAS) have become standard on modern vehicles, and with that comes a critical responsibility: proper calibration after any service that affects camera, radar, or sensor alignment. Get it wrong, and the customer's safety features become liabilities.</p>
+
+    <h2>When does ADAS need calibration?</h2>
+    <p>Many technicians don't realize how many routine jobs require ADAS recalibration:</p>
+    <ul>
+      <li>Windshield replacement (camera mounting affected)</li>
+      <li>Collision repairs (frame, bumper, hood, fenders)</li>
+      <li>Wheel alignment or suspension work</li>
+      <li>Radar sensor replacement or movement</li>
+      <li>Battery disconnect/replacement (system reset)</li>
+      <li>Headlight assembly replacement</li>
+      <li>Any work that moves the vehicle's reference points</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>⚠️ Important:</strong> Skipping ADAS calibration can result in dangerous misalignment. Lane keeping assist might steer incorrectly, adaptive cruise control might brake unexpectedly, and collision avoidance could fail.
+    </div>
+
+    <h2>Types of ADAS calibration</h2>
+
+    <h2>Dynamic (on-road) calibration</h2>
+    <p>The vehicle learns proper alignment during normal driving at highway speeds (typically 40-55 mph). This is the most common method for newer vehicles.</p>
+    <ul>
+      <li><strong>Pros:</strong> No special equipment needed, most shops handle this easily</li>
+      <li><strong>Cons:</strong> Takes 20-100 miles of driving, customer must return, long setup</li>
+      <li><strong>Process:</strong> Complete repair, clear any ADAS DTCs, instruct customer on the calibration drive</li>
+    </ul>
+
+    <h2>Static (in-shop) calibration</h2>
+    <p>Using targets and measurement tools, you align the cameras and sensors before the vehicle leaves your bay.</p>
+    <ul>
+      <li><strong>Pros:</strong> Immediate verification, no customer road-test required</li>
+      <li><strong>Cons:</strong> Requires specialized equipment ($5,000–$50,000+), takes 30–60 minutes</li>
+      <li><strong>Equipment:</strong> Target frames, measurement kits, ADAS alignment software</li>
+    </ul>
+
+    <h2>OEM-specified methods</h2>
+    <p>Always consult the vehicle manufacturer's service manual—calibration procedures vary significantly:</p>
+    <ul>
+      <li>Some vehicles require both static and dynamic calibration</li>
+      <li>Others only allow factory-approved equipment</li>
+      <li>Newer vehicles may use GPS/cloud-based verification</li>
+      <li>Some require pre-calibration scans and post-calibration validation</li>
+    </ul>
+
+    <h2>ADAS sensor types and their calibration</h2>
+
+    <h2>Monocular/Stereo cameras</h2>
+    <p>Used for lane departure warning, lane keeping assist, and collision detection.</p>
+    <ul>
+      <li><strong>Critical alignment:</strong> ±0.5° horizontally, ±0.25° vertically</li>
+      <li><strong>Calibration:</strong> Usually dynamic; some newer models support static calibration</li>
+      <li><strong>Tools needed:</strong> Camera alignment frame, target image for verification</li>
+    </ul>
+
+    <h2>Radar sensors</h2>
+    <p>Corner and front-facing radar for adaptive cruise control and collision warning.</p>
+    <ul>
+      <li><strong>Mounting critical:</strong> Radar is extremely angle-sensitive</li>
+      <li><strong>Calibration:</strong> Usually static, performed with radar alignment targets</li>
+      <li><strong>Scan tool:</strong> Live radar data during calibration verifies alignment</li>
+    </ul>
+
+    <h2>LIDAR (less common, but growing)</h2>
+    <p>Some luxury and autonomous-capable vehicles use LIDAR for 3D sensing.</p>
+    <ul>
+      <li><strong>Precision:</strong> Must be within ±2° in all axes</li>
+      <li><strong>Calibration:</strong> Almost always static with OEM-specific equipment</li>
+      <li><strong>Note:</strong> If your shop sees many luxury imports, LIDAR capability is becoming essential</li>
+    </ul>
+
+    <h2>Step-by-step ADAS calibration workflow</h2>
+    <ul>
+      <li><strong>1. Check service manual:</strong> Confirm which systems need calibration for this vehicle/service</li>
+      <li><strong>2. Scan for DTCs:</strong> Note any ADAS-related fault codes before starting</li>
+      <li><strong>3. Perform service:</strong> Complete the repair/replacement as specified</li>
+      <li><strong>4. Clear DTCs:</strong> Erase fault codes related to your service</li>
+      <li><strong>5. Perform calibration:</strong> Dynamic (road test) or static (targets) as applicable</li>
+      <li><strong>6. Verify:</strong> Scan again to confirm no new ADAS faults appear</li>
+      <li><strong>7. Document:</strong> Record the calibration type, date, and any notes for the customer record</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>🔧 Pro tip:</strong> Include calibration time and cost in your estimate. Customers often don't understand why a windshield replacement suddenly takes 2 hours or requires a follow-up road test. Education prevents sticker shock.
+    </div>
+
+    <h2>Common ADAS calibration mistakes</h2>
+    <ul>
+      <li><strong>Forgetting entirely:</strong> Especially on routine jobs like wheel alignment—OEM manuals now often flag ADAS as secondary service</li>
+      <li><strong>Wrong method:</strong> Using dynamic when static is required (or vice versa)</li>
+      <li><strong>Incomplete road test:</strong> Driving only 15 miles when 50 is required; system needs time to learn</li>
+      <li><strong>Not verifying:</strong> Skipping the post-calibration scan to confirm success</li>
+      <li><strong>Equipment mismatch:</strong> Using a generic target pattern instead of OEM-specific targets</li>
+    </ul>
+
+    <h2>Equipment recommendations for growing shops</h2>
+    <p>If ADAS work is becoming common in your area, progressively invest:</p>
+    <ul>
+      <li><strong>Phase 1 (low cost):</strong> OEM target images, measurement tape, training on dynamic calibration</li>
+      <li><strong>Phase 2 (mid-range):</strong> ADAS alignment frame kit (~$5,000–$10,000)</li>
+      <li><strong>Phase 3 (advanced):</strong> Full static calibration system with software integration (~$20,000–$50,000)</li>
+    </ul>
+
+    <div class="cta">
+      <a class="btn primary" href="/products.html">ADAS tools & targets →</a>
+      <a class="btn secondary" href="/support.html">Training resources</a>
+    </div>
+  </article>
+</div>
+</body>
+</html>
