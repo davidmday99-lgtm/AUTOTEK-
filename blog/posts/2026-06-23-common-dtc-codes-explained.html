@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Common DTC Codes Explained: Quick Reference for Technicians | ProAutoTek</title>
+  <meta name="description" content="Understand the most common diagnostic trouble codes (DTCs) you'll encounter. Learn DTC structure, how to decode them, and what they actually mean for diagnosis.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    :root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;--accent:#58a6ff;--accent2:#3fb950}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    .wrap{max-width:800px;margin:0 auto;padding:20px}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);margin-bottom:24px}
+    .logo{font-weight:700;font-size:18px;color:var(--accent)}
+    .back{color:var(--muted);text-decoration:none;font-size:14px}
+    .back:hover{color:var(--accent)}
+    article{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+    h1{margin:0 0 8px;font-size:28px;color:#fff}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:20px}
+    p{margin:0 0 16px}
+    h2{color:#fff;font-size:20px;margin:24px 0 12px;padding-top:16px;border-top:1px solid var(--border)}
+    ul{margin:0 0 16px;padding-left:20px}
+    li{margin-bottom:8px}
+    code{background:#21262d;padding:2px 6px;border-radius:4px;font-size:14px}
+    .highlight{background:linear-gradient(135deg,rgba(88,166,255,0.1),rgba(63,185,80,0.1));border:1px solid var(--border);border-radius:8px;padding:16px;margin:16px 0}
+    .cta{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+    .btn{padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;font-size:14px}
+    .btn.primary{background:var(--accent);color:#0d1117}
+    .btn.secondary{background:var(--card);color:var(--text);border:1px solid var(--border)}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav">
+    <a class="logo" href="/">🔧 ProAutoTek</a>
+    <a class="back" href="/blog.html">← Back to Blog</a>
+  </nav>
+  
+  <article>
+    <h1>Common DTC Codes Explained</h1>
+    <p class="meta">June 23, 2026 · 7 min read · Diagnostics</p>
+
+    <p>Diagnostic Trouble Codes (DTCs) can be mysterious at first, but understanding their structure and the most common codes you'll encounter will accelerate your diagnostic process and help you communicate accurately with customers.</p>
+
+    <h2>Understanding DTC Structure</h2>
+    <p>Every OBD2 code follows a five-character format: one letter followed by four numbers.</p>
+    <ul>
+      <li><strong>First character (letter):</strong> System type (P=Powertrain, B=Body, C=Chassis, U=Network)</li>
+      <li><strong>Second character (number):</strong> Standard (0) or Manufacturer-specific (1)</li>
+      <li><strong>Third character (number):</strong> System (fuel/air, ignition, emissions, etc.)</li>
+      <li><strong>Fourth &amp; fifth (numbers):</strong> Specific fault</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>💡 Example:</strong> Code <code>P0300</code> breaks down as: Powertrain (P), Standard (0), Ignition/Fuel (3), Random cylinder misfire detected (00).
+    </div>
+
+    <h2>Powertrain Codes (P0xxx)</h2>
+    <p>The most common codes you'll see relate to engine operation:</p>
+    <ul>
+      <li><strong>P0300:</strong> Random/multiple cylinder misfire—check spark plugs, fuel injectors, compression</li>
+      <li><strong>P0101:</strong> Mass airflow (MAF) sensor out of range—usually needs cleaning or replacement</li>
+      <li><strong>P0128:</strong> Coolant thermostat malfunction—often points to stuck thermostat or sensor fault</li>
+      <li><strong>P0420:</strong> Catalyst system efficiency below threshold—O2 sensor or converter issues</li>
+      <li><strong>P0500:</strong> Vehicle speed sensor malfunction—affects transmission shift quality and cruise control</li>
+    </ul>
+
+    <h2>Oxygen Sensor Codes</h2>
+    <p>O2 sensor problems are extremely common and usually straightforward to diagnose:</p>
+    <ul>
+      <li><strong>P0130-P0135:</strong> O2 sensor circuit issues (upstream)</li>
+      <li><strong>P0136-P0161:</strong> O2 sensor circuit issues (downstream)</li>
+      <li><strong>Diagnosis tip:</strong> Look at live data fuel trim—bank 1 short/long trim values tell you if the sensor is actually working or just reporting a fault</li>
+    </ul>
+
+    <h2>Transmission Codes (P0700+)</h2>
+    <p>Transmission DTCs often appear alongside engine codes:</p>
+    <ul>
+      <li><strong>P0700:</strong> Transmission control system malfunction—umbrella code, dig deeper into sub-codes</li>
+      <li><strong>P0741:</strong> Torque converter clutch circuit—usually solenoid or fluid issue</li>
+      <li><strong>P0750:</strong> Shift solenoid A malfunction—can cause hard shifts or limp mode</li>
+    </ul>
+
+    <h2>The Difference Between Code Severity</h2>
+    <p>Not all DTCs are created equal. Pay attention to severity:</p>
+    <ul>
+      <li><strong>Type A (MIL on immediately):</strong> Critical emissions or safety issue</li>
+      <li><strong>Type B (conditional):</strong> Fault condition must repeat multiple times before MIL lights</li>
+      <li><strong>Type C (informational):</strong> Doesn't trigger check engine light but still logged</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>🔧 Pro tip:</strong> A flashing check engine light (Type A) means stop driving immediately—there's either a severe misfire or a safety issue. This is different from a steady light.
+    </div>
+
+    <h2>Pending vs. Confirmed vs. Historical</h2>
+    <p>Understanding code status helps with diagnostics:</p>
+    <ul>
+      <li><strong>Pending:</strong> Fault detected once but not confirmed—drive vehicle to determine if it repeats</li>
+      <li><strong>Confirmed:</strong> Fault detected multiple times—this is the actual problem</li>
+      <li><strong>Historical:</strong> Previously detected but hasn't repeated—may be intermittent</li>
+    </ul>
+
+    <h2>Why Not to Ignore Pending Codes</h2>
+    <p>Many techs clear pending codes, but this can hide intermittent issues:</p>
+    <ul>
+      <li>Pending codes often develop into confirmed codes within 100-500 miles</li>
+      <li>Intermittent issues are harder to diagnose, but pending codes give you a head start</li>
+      <li>Document pending codes and have the customer monitor—they'll help you catch real problems early</li>
+    </ul>
+
+    <div class="cta">
+      <a class="btn primary" href="/products.html">View diagnostic resources →</a>
+      <a class="btn secondary" href="/support.html">Need help diagnosing?</a>
+    </div>
+  </article>
+</div>
+</body>
+</html>
